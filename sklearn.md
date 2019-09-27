@@ -1,4 +1,4 @@
-- generate the classification task 
+- Generate the classification task 
 
 ```python
 from sklearn.datasets import make_moons, make_circles, make_classification
