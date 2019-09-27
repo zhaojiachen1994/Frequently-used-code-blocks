@@ -14,4 +14,8 @@ Some frequently used code blocks.
   - python
   
 - Algorithm
+  - The clustering evaluation metric from sklearn
+
+- sklearn
+  - generate the classification task
   
