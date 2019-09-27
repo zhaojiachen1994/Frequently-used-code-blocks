@@ -3,12 +3,15 @@ Some frequently used code blocks.
 ---
 - Pytorch
 
-- plot
+- Plot
   - matlab
   
   - python
   
-- file process
+- File process
   - matlab
   
   - python
+  
+- Algorithm
+  
