@@ -13,3 +13,5 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_
 plt.scatter(X[:,0],X[:,1],c=y)
 plt.show()
 ```
+  - https://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html#sphx-glr-auto-examples-datasets-plot-random-dataset-py
+  - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html
