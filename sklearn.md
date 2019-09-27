@@ -1,5 +1,6 @@
 - generate the classification task 
-'''python
+
+```python
 from sklearn.datasets import make_moons, make_circles, make_classification
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -11,5 +12,4 @@ X = StandardScaler().fit_transform(X)
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=42)
 plt.scatter(X[:,0],X[:,1],c=y)
 plt.show()
-
-'''
+```
