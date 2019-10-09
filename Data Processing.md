@@ -1,6 +1,6 @@
 - 利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割。
 
-'''python
+```python
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
@@ -20,4 +20,4 @@ X, y = demoDataset()
 
 plt.plot(X,'.')
 plt.show()    
-'''
+```
