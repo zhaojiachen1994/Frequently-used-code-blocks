@@ -16,7 +16,7 @@ def demoDataset():
     X, y, _ = segment.fit_transform(ts, [y])#,[y.reshape([-1,1])]
     X = X.reshape(X.shape[0],-1)
     return X, y
-X, y = demoDataset()
+X, y = demoDataset() # shape of X is [num_samples, n_features*width]
 
 plt.plot(X,'.')
 plt.show()    
