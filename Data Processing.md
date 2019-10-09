@@ -21,4 +21,4 @@ X, y = demoDataset()
 plt.plot(X,'.')
 plt.show()    
 ```
-![image]https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
