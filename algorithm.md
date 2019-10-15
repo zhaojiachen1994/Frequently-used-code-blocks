@@ -10,8 +10,6 @@ def cluster_evaluate(y_pred, y_true):
 ```
 
 - Weighted covariance computing
-
-Mine:
 ```python
 # MINE:
 import numpy as np
