@@ -33,3 +33,33 @@ def myWeightedCov(X, w, bias=False):
 # NUMPY:
 cov = np.cov(x, bias=False, rowvar=False, aweights=w)
 ```
+
+-增量式加权协方差计算
+‵‵‵python
+def IncWeightCov(M_t0, Cov_t0, v1_t0, v2_t0, x_t1, w_t1, bias=False):
+    """
+    :param M_t0: computed mean at time t0
+    :param Cov_t0: computed covariance at time t0
+    :param v1_t0: computed sum of wights at time t0
+    :param v2_t0: sum(weight^2) at t0
+    :param x_t1: arriving sample 
+    :param w_t1: weight of arriveing sample
+    :param bias: True for bias estimation
+    :return: 
+    """
+    x_t1 = x_t1.reshape([1,-1])
+    w_t1 = np.array([w_t1])
+    v1_t1 = v1_t0 + w_t1
+    M_t1 = (M_t0*v1_t0 + x_t1*w_t1)/v1_t1
+    if bias==False:
+        v2_t1 = v2_t0 + w_t1 ** 2
+        run_sum = Cov_t0*(v1_t0**2-v2_t0)/v1_t0 + np.outer(M_t0, M_t0)*v1_t0
+        run_sum = run_sum + np.outer(x_t1, x_t1)*w_t1
+        Cov_t1 = (run_sum - np.outer(M_t1, M_t1)*v1_t1)*v1_t1/(v1_t1**2- v2_t1)
+    else:
+        v2_t1=None
+        run_sum = Cov_t0*v1_t0 + np.outer(M_t0, M_t0)*v1_t0
+        run_sum = run_sum + np.outer(x_t1, x_t1)*w_t1
+        Cov_t1 = (run_sum - np.outer(M_t1, M_t1)*v1_t1)/v1_t1
+    return M_t1, Cov_t1, v1_t1, v2_t1
+```
