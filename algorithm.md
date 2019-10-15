@@ -30,7 +30,8 @@ def myWeightedCov(X, w, bias=False):
     if bias==False:
         cov = np.dot(X_m.T, X_m*w)*v1/(v1**2-v2)
     else: cov = np.dot(X_m.T, X_m*w)/v1
-    return(cov)  
+    return(cov) 
+    
 # NUMPY:
-    cov = np.cov(x, bias=False, rowvar=False, aweights=w)
+cov = np.cov(x, bias=False, rowvar=False, aweights=w)
 ```
