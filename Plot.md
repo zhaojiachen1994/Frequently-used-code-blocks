@@ -23,3 +23,4 @@ xticklabels({'SURF','DeCaf6'})
 ylabel('Accuracy (%)')
 ylim([20,100])
 ```
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png)
