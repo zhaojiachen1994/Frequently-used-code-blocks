@@ -1,6 +1,6 @@
 - Matlab
 
-绘制groupbars
+  - 绘制groupbars
 ```matlab
 wa=[37.6,40.4;75.4,92.9];
 aw=[29.8,53.5;79.3,88.1];
