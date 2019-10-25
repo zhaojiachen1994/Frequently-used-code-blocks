@@ -22,3 +22,18 @@ plt.plot(X,'.')
 plt.show()    
 ```
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
+
+- 利用numpy和random生成三角函数曲线，并添加高斯噪声。
+```python
+# 在0-2*pi的区间上生成100个点作为输入数据
+length = 2000
+X = np.linspace(0,10*np.pi,length,endpoint=True)
+Y = np.sin(X) + np.cos(3*X)
+mu = 0
+sigma = 0.1
+noise = np.random.normal(mu, sigma, 2000)
+X = X+noise
+Y = Y+noise
+```
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
+
