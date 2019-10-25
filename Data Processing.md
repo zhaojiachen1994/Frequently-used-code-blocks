@@ -35,5 +35,5 @@ noise = np.random.normal(mu, sigma, 2000)
 X = X+noise
 Y = Y+noise
 ```
-![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
 
