@@ -49,13 +49,6 @@ for i in range(6):
     hx, cx = rnn(input[i], (hx, cx))
     output.append(hx)
 print(len(output))  # 6
-
-
-
-
-
-
-
-
 ```
+
     
