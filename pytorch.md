@@ -10,8 +10,8 @@ def get_parameter_number(net):
     - 参数：
         input_size：The number of expected features in the input x
         hidden_size: The number of features in the hidden state h
-    - input shape: (seq_len, batch, input_size)
-    - output shape: (seq_len, batch, num_directions * hidden_size)
+    - input shape: **(seq_len, batch, input_size)**
+    - output shape: **(seq_len, batch, num_directions * hidden_size)**
     - h_o, c_0, h_n, c_n shape: (num_layers * num_directions, batch, hidden_size)
 ```python
 rnn = nn.LSTM(input_size=10, hidden_size=20, num_layers=2,
