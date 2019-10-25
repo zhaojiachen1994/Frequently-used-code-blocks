@@ -13,7 +13,7 @@ def get_parameter_number(net):
     -hidden_size: The number of features in the hidden state h
 - Shape:
     - input shape: **(seq_len, batch, input_size)**
-    - output shape: **(seq_len, batch, num_directions * hidden_size)**
+    - output shape: **(seq_len, batch, num_directions x hidden_size)**
     - h_o, c_0, h_n, c_n shape: (num_layers * num_directions, batch, hidden_size)
 ```python
 rnn = nn.LSTM(input_size=10, hidden_size=20, num_layers=2,
@@ -37,7 +37,9 @@ print(hn.shape) # [2, 3, 20]
 - Shape:
     - input shape: **(batch, input_size)**
     - output shape: 
+    
         **h_1 of shape (batch, hidden_size)**
+        
         **c_1 of shape (batch, hidden_size)**
 
 ```python 
