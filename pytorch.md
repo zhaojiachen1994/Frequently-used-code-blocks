@@ -36,8 +36,9 @@ print(hn.shape) # [2, 3, 20]
     - hidden_size: The number of features in the hidden state h
 - Shape:
     - input shape: **(batch, input_size)**
-    - output shape: **h_1 of shape (batch, hidden_size)**
-                    **c_1 of shape (batch, hidden_size)**
+    - output shape: 
+        **h_1 of shape (batch, hidden_size)**
+        **c_1 of shape (batch, hidden_size)**
 
 ```python 
 rnn = nn.LSTMCell(10, 20)   # 10 is input_size, 20 is hidden_size)
