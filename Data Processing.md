@@ -104,3 +104,7 @@ Targets:
 tensor([0.4998, 1.0379, 1.2025])
 
 ```
+Inputs with shape (time_steps, batch_size, num_dim=2), The first column is the add values that prepares to be added; The second column is the add indices that indicate which value to be added.
+Targets with shape (batch_size), The sum of add values.
+
+
