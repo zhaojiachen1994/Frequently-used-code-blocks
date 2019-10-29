@@ -18,4 +18,7 @@ Some frequently used code blocks.
 
 - sklearn
   - generate the classification task
+
+- Data processing
+  - 利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割
   
