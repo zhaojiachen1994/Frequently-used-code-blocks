@@ -19,7 +19,7 @@ for name, param in model.named_parameters():
 ```
 
 
-- LSTM的输入输出形状
+## LSTM的输入输出形状
 - 参数：
     - input_size：The number of expected features in the input x
     - hidden_size: The number of features in the hidden state h
@@ -38,7 +38,7 @@ print(output.shape) # [5, 3, 20]
 print(hn.shape) # [2, 3, 20]
 ```
 
-- LSTMCell 的输入输出
+## LSTMCell 的输入输出
     - 输入输出
         - Inputs: input, (h_0, c_0)
         - Outputs: (h_1, c_1)
@@ -66,7 +66,7 @@ for i in range(6):
     output.append(hx)
 print(len(output))  # 6
 ```
-- Pytorch 如何保存模型加载模型
+## Pytorch 如何保存模型加载模型
 
 Reference: https://pytorch.org/tutorials/beginner/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training
     
