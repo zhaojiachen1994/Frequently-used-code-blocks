@@ -1,3 +1,8 @@
+- Device configuration
+```python
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+```
+
 - 统计网络的参数数量
 ```python
 def get_parameter_number(net):
