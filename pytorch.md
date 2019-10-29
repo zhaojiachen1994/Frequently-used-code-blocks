@@ -14,8 +14,8 @@ def get_parameter_number(net):
 
 - LSTM的输入输出形状
 - 参数：
-    -input_size：The number of expected features in the input x
-    -hidden_size: The number of features in the hidden state h
+    - input_size：The number of expected features in the input x
+    - hidden_size: The number of features in the hidden state h
 - Shape:
     - input shape: **(seq_len, batch, input_size)**
     - output shape: **(seq_len, batch, num_directions x hidden_size)**
