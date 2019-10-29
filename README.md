@@ -2,7 +2,12 @@
 Some frequently used code blocks.
 ---
 - Pytorch
-
+  - Device configuration
+  - 统计网络的参数数量
+  - 查看网络参数值
+  - LSTM的输入输出形状
+  - LSTMCell 的输入输出
+  - Pytorch 如何保存模型加载模型
 - Plot
   - matlab
   
