@@ -37,3 +37,48 @@ Y = Y+noise
 ```
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
 
+- 利用numpy和torch生成用于测试LSTM的加法测试数据。
+```python
+import torch
+import numpy as np
+import argparse
+from time import time
+
+
+parser = argparse.ArgumentParser(description='PyTorch IndRNN Addition test')
+parser.add_argument('--time-steps', type=int, default=4,
+                    help='length of addition problem (default: 100)')
+parser.add_argument('--batch-size', type=int, default=3,
+                    help='input batch size for training (default: 50)')
+
+args = parser.parse_args()
+
+def get_batch():
+    """Generate the adding problem dataset"""
+    # Build the first sequence
+    add_values = torch.rand(
+        args.time_steps, args.batch_size, requires_grad=False
+    )
+
+    # Build the second sequence with one 1 in each half and 0s otherwise
+    add_indices = torch.zeros_like(add_values)
+    half = int(args.time_steps / 2)
+    for i in range(args.batch_size):
+        first_half = np.random.randint(half)
+        second_half = np.random.randint(half, args.time_steps)
+        add_indices[first_half, i] = 1
+        add_indices[second_half, i] = 1
+
+    # Zip the values and indices in a third dimension:
+    # inputs has the shape (time_steps, batch_size, 2)
+    inputs = torch.stack((add_values, add_indices), dim=-1)
+    targets = torch.mul(add_values, add_indices).sum(dim=0)
+    return inputs, targets
+if __name__ == "__main__":
+    inputs, targets = get_batch()
+    print('Input:')
+    print(inputs)
+    print('Targets:')
+    print(targets)
+```
+
