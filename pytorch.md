@@ -79,7 +79,7 @@ Reference: https://pytorch.org/tutorials/beginner/saving_loading_models.html#sav
 
 -torch.laod()
 
-```python
+python
 def saveRNN(model, config):
     #:param model: A pytorch nn model
     #:param config: The parameters needed for the code
@@ -89,4 +89,3 @@ def saveRNN(model, config):
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': model.optimizer.state_dict()}
     torch.save(checkpoint, config.pathCheckpoint)
-```
