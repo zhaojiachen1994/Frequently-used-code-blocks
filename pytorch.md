@@ -75,6 +75,7 @@ def saveRNN(model, config):
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': model.optimizer.state_dict()}
     torch.save(checkpoint, config.pathCheckpoint)
+    # parser.add_argument('--pathCheckpoint', type=str, default = './checkpoint/RNN.ckpt')
 ```
  
    - torch.laod()
@@ -89,4 +90,5 @@ def saveRNN(model, config):
         'model_state_dict': model.state_dict(),
         'optimizer_state_dict': model.optimizer.state_dict()}
     torch.save(checkpoint, config.pathCheckpoint)
+    # parser.add_argument('--pathCheckpoint', type=str, default = './checkpoint/RNN.ckpt')
 ```
