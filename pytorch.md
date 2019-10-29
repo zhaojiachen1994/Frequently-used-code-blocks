@@ -1,4 +1,4 @@
-# 统计网络的参数数量
+- 统计网络的参数数量
 ```python
 def get_parameter_number(net):
     total_num = sum(p.numel() for p in net.parameters())
@@ -7,7 +7,7 @@ def get_parameter_number(net):
 ```
 
 
-# LSTM的输入输出形状
+- LSTM的输入输出形状
 - 参数：
     -input_size：The number of expected features in the input x
     -hidden_size: The number of features in the hidden state h
@@ -26,17 +26,17 @@ print(output.shape) # [5, 3, 20]
 print(hn.shape) # [2, 3, 20]
 ```
 
-# LSTMCell 的输入输出
-- 输入输出
-    - Inputs: input, (h_0, c_0)
-    - Outputs: (h_1, c_1)
+- LSTMCell 的输入输出
+    - 输入输出
+        - Inputs: input, (h_0, c_0)
+        - Outputs: (h_1, c_1)
 
-- 参数：
-    - input_size：The number of expected features in the input x
-    - hidden_size: The number of features in the hidden state h
-- Shape:
-    - input shape: **(batch, input_size)**
-    - output shape: 
+    - 参数：
+        - input_size：The number of expected features in the input x
+        - hidden_size: The number of features in the hidden state h
+    - Shape:
+        - input shape: **(batch, input_size)**
+        - output shape: 
     
         **h_1 of shape (batch, hidden_size)**
         
