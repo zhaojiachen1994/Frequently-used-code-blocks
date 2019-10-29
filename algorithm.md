@@ -34,7 +34,7 @@ def myWeightedCov(X, w, bias=False):
 cov = np.cov(x, bias=False, rowvar=False, aweights=w)
 ```
 
--增量式加权协方差计算
+- 增量式加权协方差计算
 ```python
 def IncWeightCov(M_t0, Cov_t0, v1_t0, v2_t0, x_t1, w_t1, bias=False):
     """
