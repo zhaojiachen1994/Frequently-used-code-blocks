@@ -60,15 +60,16 @@ for i in range(6):
 print(len(output))  # 6
 ```
 - Pytorch 如何保存模型加载模型
+
 Reference: https://pytorch.org/tutorials/beginner/saving_loading_models.html#saving-loading-a-general-checkpoint-for-inference-and-or-resuming-training
+
     - torch.save()
 ```python
     def saveRNN(model, config):
-    '''
-    :param model: A pytorch nn model
-    :param config: The parameters needed for the code
-    :return:
-    '''
+    
+    #:param model: A pytorch nn model
+    #:param config: The parameters needed for the code
+    #:return:
     checkpoint = {
         'config': config,
         'model_state_dict': model.state_dict(),
@@ -76,14 +77,13 @@ Reference: https://pytorch.org/tutorials/beginner/saving_loading_models.html#sav
     torch.save(checkpoint, config.pathCheckpoint)
 ‵‵‵
 
-    -torch.laod()
+-torch.laod()
+
 ```python
 def saveRNN(model, config):
-    '''
-    :param model: A pytorch nn model
-    :param config: The parameters needed for the code
-    :return:
-    '''
+    #:param model: A pytorch nn model
+    #:param config: The parameters needed for the code
+    #:return:
     checkpoint = {
         'config': config,
         'model_state_dict': model.state_dict(),
