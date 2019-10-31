@@ -99,3 +99,13 @@ def saveRNN(model, config):
     torch.save(checkpoint, config.pathCheckpoint)
     # parser.add_argument('--pathCheckpoint', type=str, default = './checkpoint/RNN.ckpt')
 ```
+
+## 设置随机种子，固定网络的初始权重
+```python
+def setup_seed(seed):
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    np.random.seed(seed)
+    random.seed(seed)
+    torch.backends.cudnn.deterministic = True
+```
