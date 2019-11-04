@@ -8,6 +8,7 @@ Some frequently used code blocks.
   - LSTM的输入输出形状
   - LSTMCell 的输入输出
   - Pytorch 如何保存模型加载模型
+  - Pytorch 调整optimizer的learning rate
 - Plot
   - matlab
     - 绘制groupbars
@@ -28,4 +29,5 @@ Some frequently used code blocks.
   - 利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割
   - 利用numpy和random生成三角函数曲线，并添加高斯噪声
   - 利用numpy和torch生成用于测试LSTM的加法测试数据
+  - Transfer time series prediction task to supervised learning task
   
