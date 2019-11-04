@@ -114,3 +114,7 @@ setup_seed(20)
 # ...
 # ...
 ```
+
+## 调整learning rate
+https://pytorch.org/docs/stable/optim.html
+https://zhuanlan.zhihu.com/p/39020473
