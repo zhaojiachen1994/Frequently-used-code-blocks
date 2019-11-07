@@ -146,4 +146,46 @@ def series_to_supervised(data, n_in=1, n_out=1, interval=1, dropnan=True):
     return agg, (X, y)
 ```
 
+- 1D autoregressive time series
+
+```python
+def buildDataAR(shiftmean=True, shiftvar=True, verbose=True):
+    '''
+    :param shiftmean: flag for mean shift
+    :param shiftvar: flag for variance shift
+    :param verbose:
+    :return:    ts: array, 1d time series with length of 5000(length_ts)
+                bkps: array, change points including head and end
+    '''
+
+    # set parameters
+    seed = 0    # random seed
+    length_ts = 5000    # length of time series
+    num_seg = 10    # number of segments
+    alpha = 0.1     # radio of variance
+
+    # generate the change points
+    np.random.seed(seed)
+    bkps = np.linspace(0,length_ts, num_seg+1, endpoint=True, dtype=int)    # including head and end
+    bkps = bkps + (np.random.normal(loc=0,scale=10, size=num_seg+1).astype(int))
+    bkps[0], bkps[-1] = 0, length_ts
+    # set mean and variance
+    mu_segs = np.zeros(num_seg)
+    sigma_segs = np.ones(num_seg)*alpha
+    if shiftmean==True:
+        mu_segs = np.array([0 if i==0 else i/5 for i in range(num_seg)])
+    if shiftvar==True:
+        sigma_segs = np.array([alpha if i%2 == 0 else np.log(np.e + 2*i)*alpha for i in range(num_seg)])
+    # generate the time series
+    ts = np.zeros(length_ts)
+    for i in range(num_seg):
+        if verbose == True:
+            print('Segment-{} [{:4d}, {:4d}] with Mean {:0.4f} Var {:0.4f}'.format(i+1, bkps[i], bkps[i+1], mu_segs[i], sigma_segs[i]))
+        for j in range(bkps[i], bkps[i+1]):
+            if j > 2:
+                ts[j] = 0.6*ts[j-1] - 0.5*ts[j-2] + np.random.normal(mu_segs[i], sigma_segs[i],1)
+    ts = np.array(ts)
+    return ts, bkps
+
+```
 
