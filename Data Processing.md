@@ -1,6 +1,5 @@
 <details>
     <summary><strong>利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割。</strong></summary>
-
 ```python
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
@@ -43,9 +42,9 @@ Y = Y+noise
 
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
 
-
 <details>
 <summary><strong>利用numpy和torch生成用于测试LSTM的加法测试数据</strong></summary>
+;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ```python
 import torch
