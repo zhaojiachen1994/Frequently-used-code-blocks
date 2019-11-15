@@ -24,8 +24,6 @@ plt.show()
 ```
 </details>
 
-![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
-
 <div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png"/></div>
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -227,3 +225,6 @@ def buildDataAR(shiftmean=True, shiftvar=True, verbose=True):
 
 ```
 </details>
+
+
+
