@@ -1,4 +1,5 @@
-- 利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割。
+<details>
+    <summary><strong>利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割。</strong></summary>
 
 ```python
 from sklearn.datasets import make_blobs
@@ -21,6 +22,7 @@ X, y = demoDataset() # shape of X is [num_samples, n_features*width]
 plt.plot(X,'.')
 plt.show()    
 ```
+</details>
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
 - 利用numpy和random生成三角函数曲线，并添加高斯噪声。
