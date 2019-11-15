@@ -25,6 +25,7 @@ plt.show()
 </details>
 
 <center>
+    
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
 ------------------------------------------------------------------------------------------------------------------------
