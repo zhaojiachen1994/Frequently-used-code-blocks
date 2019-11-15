@@ -1,5 +1,5 @@
 <details>
-    <summary><strong>   Evaluation for clustering   </strong><summary>
+    <summary><strong>   Evaluation for clustering   </strong></summary>
         
 ```python
     from sklearn.metrics.cluster import adjusted_rand_score, adjusted_mutual_info_score
