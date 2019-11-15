@@ -1,5 +1,6 @@
 <details>
     <summary><strong>利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割。</strong></summary>
+    
 ```python
 from sklearn.datasets import make_blobs
 from sklearn.preprocessing import StandardScaler
@@ -22,11 +23,11 @@ plt.plot(X,'.')
 plt.show()    
 ```
 </details>
-
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
 <details>
     <summary><strong>利用numpy和random生成三角函数曲线，并添加高斯噪声</strong></summary>
+    
 ```python
 # 在0-2*pi的区间上生成100个点作为输入数据
 length = 2000
