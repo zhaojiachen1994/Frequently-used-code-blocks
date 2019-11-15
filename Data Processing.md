@@ -159,6 +159,7 @@ Scaling-variance:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\sigma_n=\left\{\begin{matrix}&space;\alpha&space;&&space;n=0,2,...&space;\\&space;ln(e&plus;2n)&space;&&space;n=1,3...&space;\end{matrix}\right." target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sigma_n=\left\{\begin{matrix}&space;\alpha&space;&&space;n=0,2,...&space;\\&space;ln(e&plus;2n)&space;&&space;n=1,3...&space;\end{matrix}\right." title="\sigma_n=\left\{\begin{matrix} \alpha & n=0,2,... \\ ln(e+2n) & n=1,3... \end{matrix}\right." /></a>
 </summary>
+
 ```python
 def buildDataAR(shiftmean=True, shiftvar=True, verbose=True):
     '''
