@@ -226,5 +226,34 @@ def buildDataAR(shiftmean=True, shiftvar=True, verbose=True):
 ```
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
 
+<details> 
+    <summary><strong>   TITLE   </strong></summary>
+
+```python
+def extractsharedclass(X_src, y_src, X_tar, y_tar):
+'''
+description: extract the same classes from two sets sharing some classes.
+'''
+shareLabels = set(y_src.flatten()) & set(y_tar.flatten())
+print(shareLabels)
+for i, j in enumerate(shareLabels):
+    if i == 0:
+        ind_src, ind_tar = y_src == j, y_tar == j
+    else:
+        ind_src, ind_tar = (y_src == j) + ind_src, (y_tar == j) + ind_tar
+print(ind_src.shape)
+X_src, y_src = X_src[ind_src.flatten()], y_src[ind_src]
+X_tar, y_tar = X_tar[ind_tar.flatten()], y_tar[ind_tar]
+return (X_src, y_src, X_tar, y_tar)
+    
+# X_src = np.linspace(1,18,18).reshape([-1,2])
+# X_tar = np.linspace(1,18,18).reshape([-1,2])
+# y_src = np.array([1,1,1,3,3,3,5,5,5])
+# y_tar = np.array([1,1,2,2,2,2,5,5,5])
+# print(X_src)
+# print(y_src)
+```
+</details>
 
