@@ -24,7 +24,7 @@ plt.show()
 ```
 </details>
 
-<div align=center><img width = '200' height ='1500' src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png"/></div>
+<div align=center><img width = '1000' height ='200' src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png"/></div>
 
 ------------------------------------------------------------------------------------------------------------------------
 
