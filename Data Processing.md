@@ -26,7 +26,7 @@ plt.show()
 
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
-===============================
+------------------------------------------------------------------------------------------------------------------------
 
 <details>
     <summary><strong>利用numpy和random生成三角函数曲线，并添加高斯噪声</strong></summary>
@@ -46,7 +46,7 @@ Y = Y+noise
 
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+------------------------------------------------------------------------------------------------------------------------
 
 <details>
     <summary><strong>利用numpy和torch生成用于测试LSTM的加法测试数据</strong></summary>
