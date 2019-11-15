@@ -24,10 +24,8 @@ plt.show()
 ```
 </details>
 
-<div align=center>
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
-</div>
-    
+<div align=center><img width = '150' height ='150' src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png"/></div>
 ------------------------------------------------------------------------------------------------------------------------
 
 <details>
