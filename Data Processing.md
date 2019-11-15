@@ -39,7 +39,9 @@ Y = Y+noise
 
 <details>
 <summary>
-*利用numpy和torch生成用于测试LSTM的加法测试数据*
+    
+**利用numpy和torch生成用于测试LSTM的加法测试数据**
+
 </summary>
 
 ```python
