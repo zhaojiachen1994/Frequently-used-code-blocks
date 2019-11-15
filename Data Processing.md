@@ -26,7 +26,7 @@ plt.show()
 
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
-----------------------------------------------------------------------------------------------------------------------
+===============================
 
 <details>
     <summary><strong>利用numpy和random生成三角函数曲线，并添加高斯噪声</strong></summary>
