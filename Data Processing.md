@@ -38,11 +38,7 @@ Y = Y+noise
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
 
 <details>
-<summary>
-    
-**利用numpy和torch生成用于测试LSTM的加法测试数据**
-
-</summary>
+<summary>**利用numpy和torch生成用于测试LSTM的加法测试数据**</summary>
 
 ```python
 import torch
