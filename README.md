@@ -40,3 +40,5 @@ Some frequently used code blocks.
         CODE---CODE
       ```
       </details>
+      
+      <div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
