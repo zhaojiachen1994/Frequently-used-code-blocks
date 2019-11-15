@@ -229,7 +229,7 @@ def buildDataAR(shiftmean=True, shiftvar=True, verbose=True):
 ------------------------------------------------------------------------------------------------------------------------
 
 <details> 
-    <summary><strong>   TITLE   </strong></summary>
+    <summary><strong>  Extract the same classes from two sets sharing some classes    </strong></summary>
 
 ```python
 def extractsharedclass(X_src, y_src, X_tar, y_tar):
