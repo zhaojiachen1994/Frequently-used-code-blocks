@@ -40,7 +40,9 @@ X = X+noise
 Y = Y+noise
 ```
 </details>
+
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
+
 
 <details>
 <summary><strong>利用numpy和torch生成用于测试LSTM的加法测试数据</strong></summary>
@@ -116,7 +118,8 @@ Targets with shape (batch_size), The sum of add values.
 </details>
 
 
-- Transfer time series prediction task to supervised learning task
+<details>
+    <summary><strong>Transfer time series prediction task to supervised learning task</strong></summary>
 
 ```python
 def series_to_supervised(data, n_in=1, n_out=1, interval=1, dropnan=True):
@@ -154,6 +157,7 @@ def series_to_supervised(data, n_in=1, n_out=1, interval=1, dropnan=True):
     X, y = values[:, :-n_vars*n_out], values[:, -n_vars*n_out:]
     return agg, (X, y)
 ```
+</details>
 
 - 1D autoregressive time series
 <details>
