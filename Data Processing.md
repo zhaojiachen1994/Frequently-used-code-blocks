@@ -23,6 +23,7 @@ plt.plot(X,'.')
 plt.show()    
 ```
 </details>
+
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/seglearn.png)
 
 - 利用numpy和random生成三角函数曲线，并添加高斯噪声。
