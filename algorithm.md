@@ -5,9 +5,9 @@
     from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
     def classify_evaluate(y_true, y_pred):
         Acc = accuracy_score(y_true, y_pred)
-        Pre = precision_score(y_true, y_pred)
-        Rec = recall_score(y_true, y_pred)
-        f1 = f1_score(y_true, y_pred)
+        Pre = precision_score(y_true, y_pred, pos_label='positive', average='micro')
+        Rec = recall_score(y_true, y_pred, pos_label='positive', average='micro')
+        f1 = f1_score(y_true, y_pred, pos_label='positive', average='micro')
         evaluation = {'Acc': Acc, 'Pre': Pre, 'Rec': Rec, 'f1': f1}
         return evaluation
 ```
