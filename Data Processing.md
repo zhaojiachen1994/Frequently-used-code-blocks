@@ -44,7 +44,7 @@ Y = Y+noise
 ```
 </details>
 
-![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png)
+<div align=center><img width = '1000' height ='200' src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
 
 ------------------------------------------------------------------------------------------------------------------------
 
