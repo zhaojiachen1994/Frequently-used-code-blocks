@@ -1,4 +1,20 @@
 <details>
+    <summary><strong>   Evaluation for classification   </strong></summary>
+    
+```python
+    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+    def classify_evaluate(y_true, y_pred):
+        Acc = accuracy_score(y_true, y_pred)
+        Pre = precision_score(y_true, y_pred)
+        Rec = recall_score(y_true, y_pred)
+        f1 = f1_score(y_true, y_pred)
+        evaluation = {'Acc': Acc, 'Pre': Pre, 'Rec': Rec, 'f1': f1}
+        return evaluation
+```
+
+</details>
+
+<details>
     <summary><strong>   Evaluation for clustering   </strong></summary>
         
 ```python
@@ -13,30 +29,33 @@
 
 </details>
 
-- Weighted covariance computing
-```python
-# MINE:
-import numpy as np
-def myWeightedCov(X, w, bias=False):
-    """
-    :param X: Sample matrix, ndarray, [num_sample, num_dim]
-    :param w: weight array, ndarray, [num_sample, 1]
-    :param bias: bool, 'False' for non bias covariance estimation
-    :return: Weighted covariance matrix
-    """
-    w = w.reshape(-1, 1)
-    v1 = np.sum(w)
-    v2 = np.sum(w**2)
-    Mean_w = np.sum(X*w, axis=0, keepdims=True)/v1
-    X_m = X-Mean_w
-    if bias==False:
-        cov = np.dot(X_m.T, X_m*w)*v1/(v1**2-v2)
-    else: cov = np.dot(X_m.T, X_m*w)/v1
-    return(cov) 
+<details>
+    <summary><strong>   Weighted covariance computing   </strong></summary>
     
-# NUMPY:
-cov = np.cov(x, bias=False, rowvar=False, aweights=w)
+```python
+    # MINE:
+    import numpy as np
+    def myWeightedCov(X, w, bias=False):
+        """
+        :param X: Sample matrix, ndarray, [num_sample, num_dim]
+        :param w: weight array, ndarray, [num_sample, 1]
+        :param bias: bool, 'False' for non bias covariance estimation
+        :return: Weighted covariance matrix
+        """
+        w = w.reshape(-1, 1)
+        v1 = np.sum(w)
+        v2 = np.sum(w**2)
+        Mean_w = np.sum(X*w, axis=0, keepdims=True)/v1
+        X_m = X-Mean_w
+        if bias==False:
+            cov = np.dot(X_m.T, X_m*w)*v1/(v1**2-v2)
+        else: cov = np.dot(X_m.T, X_m*w)/v1
+        return(cov) 
+
+    # NUMPY:
+    cov = np.cov(x, bias=False, rowvar=False, aweights=w)
 ```
+</details>
 
 - 增量式加权协方差计算
 ```python
