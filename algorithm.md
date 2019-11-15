@@ -1,4 +1,6 @@
-- Evaluation for clustering
+<details>
+    <summary><strong>   Evaluation for clustering   </strong><summary>
+        
 ```python
 from sklearn.metrics.cluster import adjusted_rand_score, adjusted_mutual_info_score
 def cluster_evaluate(y_pred, y_true):
@@ -8,6 +10,8 @@ def cluster_evaluate(y_pred, y_true):
     evaluation = {'ACC': Acc, 'ARI': ARI, 'AMI': AMI}
     return evaluation
 ```
+
+</details>
 
 - Weighted covariance computing
 ```python
