@@ -160,7 +160,17 @@ def series_to_supervised(data, n_in=1, n_out=1, interval=1, dropnan=True):
 
     values = agg.values
     X, y = values[:, :-n_vars*n_out], values[:, -n_vars*n_out:]
+    X = X.reshape(-1, n_out, n_vars)
+    y = y.reshape(-1, n_out, n_vars)
     return agg, (X, y)
+def check_series_to_supervised():
+    setup_seed(1)
+    # data = np.random.rand(100,2)
+    data = np.linspace(1,200,200).reshape([100,2])
+    print(data[:10, :])
+    agg, (X, y) = series_to_supervised(data, n_in=5, n_out=5, interval=1, dropnan=True)
+    print(X[0:2, :, :])
+    print(y[0:2, :, :])
 ```
 </details>
 
