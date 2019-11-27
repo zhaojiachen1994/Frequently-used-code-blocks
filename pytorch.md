@@ -115,6 +115,20 @@ setup_seed(20)
 # ...
 ```
 
+<details> 
+    <summary><strong>   高斯法初始化网络权重   </strong></summary>
+
+```python
+      def init_weights(self):#定义在model类中，执行在初始化最后阶段。
+        initrange = 0.1
+        self.encoder.weight.data.uniform_(-initrange, initrange)
+        self.decoder.bias.data.fill_(0)
+        self.decoder.weight.data.uniform_(-initrange, initrange)
+```
+</details>
+
+
+
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
 https://zhuanlan.zhihu.com/p/39020473
