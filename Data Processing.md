@@ -305,8 +305,10 @@ def foldts_XY(x, y, length_win, tensorlize=False):
     for gamma in [20,5,2,1,0.5,0.25,0.1]:
         ts = np.exp(-gamma*t)
         line, = ax.plot(t, ts, label='gamma={:.2f}'.format(gamma))
-    ax.legend(loc='right')
+    ax.legend(loc='upper right')
     plt.grid(True)
+    plt.xlabel('t')
+    plt.ylabel('exp(-gamma*t)')
     plt.show()
 ```
 </details>
