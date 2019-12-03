@@ -294,3 +294,25 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 ```
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>  负指数曲线的变化趋势  </strong></summary>
+
+```python
+    t = np.linspace(0,1,100)
+    fig, ax = plt.subplots()
+    for gamma in [20,5,2,1,0.5,0.25,0.1]:
+        ts = np.exp(-gamma*t)
+        line, = ax.plot(t, ts, label='gamma={:.2f}'.format(gamma))
+    ax.legend(loc='right')
+    plt.grid(True)
+    plt.show()
+```
+</details>
+
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
+
+------------------------------------------------------------------------------------------------------------------------
+
