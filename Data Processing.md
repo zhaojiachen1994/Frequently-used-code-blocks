@@ -294,6 +294,8 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 ```
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
+
 <details> 
     <summary><strong>  OneClassSVM for outlier detection  </strong></summary>
 
