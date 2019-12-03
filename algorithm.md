@@ -94,3 +94,30 @@
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>  OneClassSVM for outlier detection, AUC to evaluate the results </strong></summary>
+
+```python
+from sklearn.metrics import roc_auc_score
+from sklearn.svm import OneClassSVM
+def oneSVMmodel(X,y, gamma = 1e-6):
+    '''
+    :param X: [num_sample, num_dim]
+    :param y: [num_sample, ], positive samples(minority, outliers) is labeled as 1
+    :param gamma: gamma for rbf kernel used in OneClassSVM
+    :return: y_pred: predicted label, outliers are labeled as 1
+             y_prob: outlier scores, higher for more abnormal
+             auc: Area Under the Receiver Operating Characteristic Curve (ROC AUC) from sklearn.
+    '''
+    clf = OneClassSVM(gamma=gamma).fit(X)
+    y_pred = clf.predict(X)
+    y_pred = np.where(y_pred == 1, 0, y_pred)
+    y_pred = np.where(y_pred==-1, 1, y_pred)
+    y_prob = clf.score_samples(X)
+    y_prob = np.max(y_prob)-y_prob
+    auc = roc_auc_score(y, y_prob)
+    return y_pred, y_prob, auc
+```
+</details>
+
