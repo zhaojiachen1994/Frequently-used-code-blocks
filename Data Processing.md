@@ -267,3 +267,31 @@ def extractsharedclass(X_src, y_src, X_tar, y_tar):
 ```
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>  seglearn.SegmentXY自定义Y的提取方法 eg:max   </strong></summary>
+
+```python
+def foldts_XY(x, y, length_win, tensorlize=False):
+    '''
+    :param x: [length_ts, num_dim]
+    :param length_win:
+    :return: X with shape of [batch_size, length_win, num_dim]
+             y with shape of [batch_size,]
+    '''
+    segment = SegmentXY(width=length_win, overlap=0, y_func=lambda x: np.max(x,axis=1))
+
+    output = segment.fit_transform([x], [y])
+    X = output[0]#.reshape([-1, length_win])
+    y = output[1]
+
+    if tensorlize==True:
+        X = torch.from_numpy(X).float()
+        y = torch.from_numpy(y.copy()).float()
+
+    return X, y
+```
+</details>
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
