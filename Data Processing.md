@@ -312,7 +312,7 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 </details>
 
 
-<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/expcurve.png"/></div>
 
 ------------------------------------------------------------------------------------------------------------------------
 
