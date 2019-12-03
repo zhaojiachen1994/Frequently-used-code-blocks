@@ -297,7 +297,7 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 ------------------------------------------------------------------------------------------------------------------------
 
 <details> 
-    <summary><strong>  OneClassSVM for outlier detection  </strong></summary>
+    <summary><strong>  OneClassSVM for outlier detection, AUC to evaluate the results </strong></summary>
 
 ```python
 from sklearn.metrics import roc_auc_score
