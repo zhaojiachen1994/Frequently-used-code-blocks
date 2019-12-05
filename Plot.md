@@ -108,5 +108,6 @@ plot(s1,zeros(num,1),    's',    'MarkerFaceColor','b',  'MarkerEdgeColor','b', 
 ```
 </details>
 
-![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gaussian-fit.png)
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/2d-gmm.png)
+
 
