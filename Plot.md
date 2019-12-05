@@ -33,6 +33,8 @@ ref: https://blog.csdn.net/miao_9/article/details/53511487
 <details> 
     <summary><strong>   一维高斯混合模型的拟合曲线绘制   </strong></summary>
 
+ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
+     [2]  官方文档-gmdistribution
 ```matlab
   % GENERATE DATAS
   p = [0.4 0.6]; % p is the proportion of two-component Gaussian distribution
@@ -57,4 +59,4 @@ ref: https://blog.csdn.net/miao_9/article/details/53511487
 ```
 </details>
 
-<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png"/></div>
