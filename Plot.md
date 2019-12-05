@@ -74,6 +74,6 @@ y = pdf(pd_s1,t);
 plot(t,y,'LineWidth',0.5)
 plot(s1,zeros(num,1),    's',    'MarkerFaceColor','b',  'MarkerEdgeColor','b',   'MarkerSize', 5)
 ```
-
+</details>
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gaussian-fit.png)
 
