@@ -60,3 +60,21 @@ ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
 </details>
 
 <div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png"/></div>
+
+<details> 
+    <summary><strong>   一维高斯模型的拟合曲线绘制（基础概率都可以拟合）-fitdist   </strong></summary>
+
+```matlab
+rng('default'); % For reproducibility
+figure
+hold on 
+num=30;
+s1 = normrnd(0,1,num,1)
+pd_s1 = fitdist(s1, 'Normal');
+t = -5:0.1:15;
+y = pdf(pd_s1,t);
+plot(t,y,'LineWidth',0.5)
+plot(s1,zeros(num,1),    's',    'MarkerFaceColor','b',  'MarkerEdgeColor','b',   'MarkerSize', 5)
+</details>
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png"/></div>
