@@ -86,7 +86,7 @@ ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
 ```
 </details>
 
-<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png" width="200" height="400"/></div>
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png" width="400" height="200"/></div>
 
 ------------------------------------------------------------------------------------------------------------------------------------
 
