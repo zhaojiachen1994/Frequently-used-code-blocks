@@ -27,3 +27,34 @@ ylim([20,100])
 
 
 ref: https://blog.csdn.net/miao_9/article/details/53511487
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   一维高斯混合模型的拟合曲线绘制   </strong></summary>
+
+```matlab
+  % GENERATE DATAS
+  p = [0.4 0.6]; % p is the proportion of two-component Gaussian distribution
+  mu = [0; 5]
+  sigma =[0.8]
+  gm = gmdistribution(mu,sigma,p)
+  rng('default'); % For reproducibility
+  [X,compIdx] = random(gm,100);
+  numIdx1 = sum(compIdx == 1)
+
+  % FIT THE DATA WITH GMM MODEL
+  options = statset('Display','final');
+  obj = gmdistribution.fit(X,2,'Options',options);
+
+  %PLOT THE CURVE AND RAW DATA
+  figure
+  fun = @(x)pdf(obj, [x]);
+  t = linspace(-5,10)';
+  hold on
+  plot(t, fun(t))
+  plot(X,0,'r*')
+```
+</details>
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
