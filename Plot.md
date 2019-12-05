@@ -1,6 +1,8 @@
 - Matlab
 
-  - 绘制groupbars
+<details> 
+    <summary><strong>   绘制groupbars  </strong></summary>
+  
 ```matlab
 wa=[37.6,40.4;75.4,92.9];
 aw=[29.8,53.5;79.3,88.1];
@@ -23,8 +25,9 @@ xticklabels({'SURF','DeCaf6'})
 ylabel('Accuracy (%)')
 ylim([20,100])
 ```
-![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png)
+</details>
 
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
