@@ -26,8 +26,6 @@ ylim([20,100])
 ![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png)
 
 
-ref: https://blog.csdn.net/miao_9/article/details/53511487
-
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details> 
@@ -76,6 +74,6 @@ y = pdf(pd_s1,t);
 plot(t,y,'LineWidth',0.5)
 plot(s1,zeros(num,1),    's',    'MarkerFaceColor','b',  'MarkerEdgeColor','b',   'MarkerSize', 5)
 ```
-</details>
 
-<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gaussian-fit.png"/></div>
+![image](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gaussian-fit.png.png)
+
