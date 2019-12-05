@@ -59,6 +59,38 @@ ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
 
 <div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png"/></div>
 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   2维高斯混合模型的拟合曲线绘制   </strong></summary>
+
+```matlab
+  % GENERATE DATAS
+  p = [0.4 0.6]; % p is the proportion of two-component Gaussian distribution
+  mu = [1 2;-3 -5];% for 2 dimension
+  sigma = cat(3,[2 .5],[1 1]); % shared diagonal covariance matrix for 2 dimensions
+  gm = gmdistribution(mu,sigma,p)
+  rng('default'); % For reproducibility
+  [X,compIdx] = random(gm,200);
+  numIdx1 = sum(compIdx == 1)
+
+  % FIT THE DATA WITH GMM MODEL
+  options = statset('Display','final');
+  obj = gmdistribution.fit(X,2,'Options',options);
+
+  %PLOT THE CURVE AND RAW DATA
+  scatter(X(:,1),X(:,2),10,'.')
+  hold on
+  h = ezcontour(@(x,y)pdf(obj,[x y]),[-8 6],[-8 6]);
+  hold off
+```
+</details>
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png"/></div>
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
 <details> 
     <summary><strong>   一维高斯模型的拟合曲线绘制（基础概率都可以拟合）-fitdist   </strong></summary>
 
