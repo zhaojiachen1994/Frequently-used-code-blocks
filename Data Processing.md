@@ -318,3 +318,27 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<details> 
+    <summary><strong>   保存实验组的结果到csv文件   </strong></summary>
+
+```python
+  def addResulttoCSV(df, file):
+    '''
+    :df: the result dictionary or dataframe
+    :file: the target file name to save the results
+    '''
+    df = pd.DataFrame(df)
+    try:
+        with open(file, 'a+') as f:# if no file, then create it
+            try:
+                pd.read_csv(file)   # if file is not empty, then append it without header
+                df.to_csv(f, header=False,  index=False)
+            except:
+                df.to_csv(f, index=False)   # if file is empty, then add first line with header
+    except:
+        print('!!!Cannot open {}!!!'.format(file))
+```
+</details>
+
+------------------------------------------------------------------------------------------------------------------------
+
