@@ -71,6 +71,7 @@ for param_cur_dict in param_grid:
 '''
 1. save the results.
 2. with cross validation and test set.
+3. parallelize
 '''
 
 ```
