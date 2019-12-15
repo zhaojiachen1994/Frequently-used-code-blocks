@@ -78,3 +78,51 @@ for param_cur_dict in param_grid:
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   PARAMETERS GRID SEARCH WITH Multi-Process Parallel Computing   </strong></summary>
+
+```python
+# EXPERIMENTS FOR PARAMETERS GRID SEARCH WITH Multi-Process Parallel Computing
+from sklearn.model_selection import ParameterGrid
+import multiprocessing
+import time
+from sys import stdout
+
+
+class MODEL:
+	def __init__(self, param1=1, param2=4, param3='t'):
+		super(MODEL, self).__init__()
+		self.param1, self.param2, self.param3 = param1, param2, param3
+	def fit(self):
+		stdout.write('param1: {} | param2: {} | param3: {} | 5s\n'.format(self.param1, self.param2, self.param3))
+		time.sleep(2)
+
+	def pipe(self, param1=1, param2=4, param3='t'):
+		self.__init__(param1, param2, param3)
+		self.fit()
+
+if __name__ == '__main__':
+	### LOCAL ADAPTATION STEP1: DEFINE THE PARAMETER GRID AND MODEL.
+	param_search_dict = {'param1': [1, 2], 'param2': [4, 5],'param3': ['t', 'm', 'd']}  # MUST CONTAIN ALL PARAMETERS
+	model = MODEL()
+	# DON'T CHANGE
+	param_grid_dict = ParameterGrid(param_search_dict)
+	param_grid_list = [tuple(param_cur_dict.values()) for param_cur_dict in param_grid_dict]
+	cores = multiprocessing.cpu_count()
+	with multiprocessing.Pool(processes=cores) as pool:
+		t0 = time.time()
+		### LOCAL ADAPTATION STEP2: DEFINE THE SOLVER PIPELINE.
+		pool.starmap(model.pipe, param_grid_list)
+		pool.close()
+		pool.join()
+		runningtime = time.time()-t0
+		print(runningtime)
+```
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
