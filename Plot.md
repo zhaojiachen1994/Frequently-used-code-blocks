@@ -26,9 +26,8 @@ ylim([20,100])
 
 </blockquote></details>
 
-<details open><summary><strong>   Figure  </strong></summary>
+- Figure
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-</details>
 
 </blockquote></details>
 
