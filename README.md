@@ -33,14 +33,20 @@ Some frequently used code blocks.
   
 - TEMPLATE
 
-      <details> 
-          <summary><strong>   TITLE   </strong></summary>
+      <details><summary><strong>   Title  </strong></summary><blockquote>
+      <details><summary><strong>   Code  </strong></summary><blockquote>
 
-      ```python
-        CODE---CODE
+      ```matlab
+      code
       ```
-      </details>
-      
-      <div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
 
-      ----------------------------------------------------------------------------------------------------------------------------------------
+      </blockquote></details>
+
+      <details open><summary><strong>   Figure  </strong></summary>  
+      <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
+      </details>
+
+      </blockquote></details>
+
+      -----------------------------------------------------------------------------------------------------------------------------------
+
