@@ -37,6 +37,7 @@ ylim([20,100])
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details><summary><strong>   一维高斯混合模型的拟合曲线绘制  </strong></summary><blockquote>
+  
 ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
      [2]  官方文档-gmdistribution
   
