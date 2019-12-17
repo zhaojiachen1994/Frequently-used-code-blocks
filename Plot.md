@@ -1,5 +1,3 @@
-- Matlab
-
 <details> 
     <summary><strong>   绘制groupbars  </strong></summary>
   
@@ -27,8 +25,10 @@ ylim([20,100])
 ```
 </details>
 
+<details> 
+    <summary><strong>   Figure  </strong></summary>
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-
+</details>
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details> 
