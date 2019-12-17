@@ -113,3 +113,52 @@ plot(s1,zeros(num,1),    's',    'MarkerFaceColor','b',  'MarkerEdgeColor','b', 
 
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gaussian-fit.png" width="300" height="150"/></div>
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   Group bars with variance   </strong></summary>
+
+```matlab
+%1. acc of srm only
+Acc1=[53.94, 44.24, 42.69, 29.74, 46.40];
+Var1=[0.24, 0.30, 1.20 ,1.25, 0.73];
+% 2. acc of srm+distribution alignment
+Acc2=[48.1, 38.57, 36.43, 33.32, 43.88];
+Var2=[1.85, 1.50, 0.24, 0.82, 0.92];
+%3. acc of dgfk+srm
+Acc3=[59.33,46.66,44.84,40.54, 50.76];
+Var3=[1.38,1.28,3.16,0.26,1.07];
+%4. acc of dgfk+da+srm
+Acc4=[61.67,46.37,47.51,44.98,53.19];
+Var4=[1.57,0.88,0.86,0.22,0.77];
+
+%5. acc of all
+Acc5=[62.2,47.2,49.7,44.6, 54.10]
+Var5=[1.38,1.78,1,0.26,0.70]
+
+Acc=[Acc1;Acc2;Acc3;Acc4;Acc5]';
+figure
+set (gcf,'Position',[300,300,550,350], 'color','w')
+bar(Acc,'grouped')
+set(gca, 'YGrid', 'on', 'XGrid', 'off')
+xticklabels({'C-A','A-C','A-D','D-A','Mean'})
+set (gca,'position',[0.1,0.1,0.8,0.8] )
+legend('SRM (Baseline)', 'SRM+DA', 'SRM+DML', 'SRM+DML+DA','SRM+DML+DA+DPL')
+ylabel('Accuracy (%)')
+ylim([25,70])
+
+e=[Var1;Var2;Var3;Var4;Var5]';
+hold on 
+numgroups = size(e,1);
+numbars = size(e,2);
+groupwidth = min(0.8, numbars/(numbars+1.5));
+for i = 1:numbars
+    x = (1:numgroups) - groupwidth/2 + (2*i-1)* groupwidth / (2*numbars); %aligning error bar with individual bar
+    h = errorbar (x, Acc(:,i), e(:,i),'k','linestyle','none','lineWidth',0.5,'CapSize',5);
+end
+```
+</details>
+
+<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
+
+----------------------------------------------------------------------------------------------------------------------------------------
