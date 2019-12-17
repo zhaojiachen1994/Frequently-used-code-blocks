@@ -1,5 +1,4 @@
-<details> 
-    <summary><strong>   绘制groupbars  </strong></summary>
+<details><summary><strong>   绘制groupbars  </strong></summary><blockquote>
   
 ```matlab
 wa=[37.6,40.4;75.4,92.9];
@@ -23,12 +22,15 @@ xticklabels({'SURF','DeCaf6'})
 ylabel('Accuracy (%)')
 ylim([20,100])
 ```
-</details>
 
-<details> 
-    - <summary><strong>   Figure  </strong></summary>
+<details open><summary><strong>   Figure  </strong></summary>
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
 </details>
+
+</blockquote></details>
+
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details> 
