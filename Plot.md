@@ -164,6 +164,6 @@ end
 ```
 </details>
 
-<div align=center><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/sin.png"/></div>
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/barwithvars.png" width="300" height="150"/></div>
 
 ----------------------------------------------------------------------------------------------------------------------------------------
