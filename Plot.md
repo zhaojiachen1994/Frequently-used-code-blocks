@@ -36,11 +36,12 @@ ylim([20,100])
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-<details> 
-    <summary><strong>   一维高斯混合模型的拟合曲线绘制   </strong></summary>
-
+<details><summary><strong>   一维高斯混合模型的拟合曲线绘制  </strong></summary><blockquote>
 ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
      [2]  官方文档-gmdistribution
+  
+<details><summary><strong>   Code  </strong></summary><blockquote>
+
 ```matlab
   % GENERATE DATAS
   p = [0.4 0.6]; % p is the proportion of two-component Gaussian distribution
@@ -65,7 +66,11 @@ ref: [1]  https://blog.csdn.net/miao_9/article/details/53511487
 ```
 </details>
 
+<details open><summary><strong>   Figure  </strong></summary>  
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/1d-gmm.png" width="300" height="150"/></div>
+</details>
+
+</blockquote></details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
