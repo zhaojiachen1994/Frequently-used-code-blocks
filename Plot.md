@@ -173,3 +173,6 @@ end
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/barwithvars.png" width="300" height="150"/></div>
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+
+to do: from tabulate import tabulate 直接用python将字典生成latex的表格或者psql的表格。
