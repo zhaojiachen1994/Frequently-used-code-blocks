@@ -50,3 +50,4 @@ Some frequently used code blocks.
 
       -----------------------------------------------------------------------------------------------------------------------------------
 
+seeds = np.random.randint(np.iinfo(np.uint32).max, size=RUNS, dtype=np.uint32)
