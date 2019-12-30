@@ -123,6 +123,22 @@ if __name__ == '__main__':
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+<details><summary><strong>   实验结果保存至log和csv文件  </strong></summary><blockquote>
+<details><summary><strong>   Code  </strong></summary><blockquote>
+
+```matlab
+code
+```
+
+</blockquote></details>
+
+<details open><summary><strong>   Figure  </strong></summary>  
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
+</details>
+
+</blockquote></details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 
 
