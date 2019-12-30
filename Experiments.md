@@ -124,7 +124,6 @@ if __name__ == '__main__':
 ----------------------------------------------------------------------------------------------------------------------------------------
 
 <details><summary><strong>   实验结果保存至log和csv文件  </strong></summary><blockquote>
-<details><summary><strong>   Code  </strong></summary><blockquote>
 
 ```python
 '''
@@ -142,8 +141,6 @@ results.to_csv(resultPath+'/test.csv')
 resultTable = tabulate(results, headers='keys', tablefmt='psql',showindex="never")
 logger.info(f'ResultTable:\n{resultTable}')
 ```
-
-</blockquote></details>
 
 </blockquote></details>
 
