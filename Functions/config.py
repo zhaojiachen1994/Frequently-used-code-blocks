@@ -1,6 +1,6 @@
 '''
 Copy from DeepADoTS
-Des: create the logging file
+Des: create the logging file, have the equal dir to evaluator
 '''
 
 import logging
