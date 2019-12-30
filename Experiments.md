@@ -128,14 +128,22 @@ if __name__ == '__main__':
 
 ```python
 '''
+resultPath = 'results'
+os.makedirs(resultPath, exist_ok=True)
+init_logging(output_dir='results/logs', file_name='test')
+logger = logging.getLogger(__name__)
 
+results = pd.DataFrame({'dataset':[], 'model':[], 'acc':[]})
+results = results.append({'dataset': "set1", 'model': "knn", 'acc': 3, 'Paras': f"gamma={3}"}, ignore_index=True)
+results = results.append({'dataset': "set2", 'model': "svm"}, ignore_index=True)
+results.fillna(0, inplace=True)
+
+results.to_csv(resultPath+'/test.csv')
+resultTable = tabulate(results, headers='keys', tablefmt='psql',showindex="never")
+logger.info(f'ResultTable:\n{resultTable}')
 ```
 
 </blockquote></details>
-
-<details open><summary><strong>   Figure  </strong></summary>  
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-</details>
 
 </blockquote></details>
 
