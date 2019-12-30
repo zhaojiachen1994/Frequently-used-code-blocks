@@ -123,10 +123,9 @@ if __name__ == '__main__':
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-<details><summary><strong>   实验结果保存至log和csv文件  </strong></summary><blockquote>
+<details><summary><strong>   实验结果保存至log和csv文件  </strong></summary>
 
 ```python
-'''
 resultPath = 'results'
 os.makedirs(resultPath, exist_ok=True)
 init_logging(output_dir='results/logs', file_name='test')
@@ -142,7 +141,7 @@ resultTable = tabulate(results, headers='keys', tablefmt='psql',showindex="never
 logger.info(f'ResultTable:\n{resultTable}')
 ```
 
-</blockquote></details>
+</details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
