@@ -32,7 +32,7 @@ Some frequently used code blocks.
   - Transfer time series prediction task to supervised learning task
   
 - TEMPLATE
-
+<details><summary><strong>   双折叠  </strong></summary><blockquote>
       <details><summary><strong>   Title  </strong></summary><blockquote>
       <details><summary><strong>   Code  </strong></summary><blockquote>
 
@@ -49,5 +49,7 @@ Some frequently used code blocks.
       </blockquote></details>
 
       -----------------------------------------------------------------------------------------------------------------------------------
+
+</blockquote></details>
 
 seeds = np.random.randint(np.iinfo(np.uint32).max, size=RUNS, dtype=np.uint32)
