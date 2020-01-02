@@ -121,3 +121,27 @@ def oneSVMmodel(X,y, gamma = 1e-6):
 ```
 </details>
 
+-----------------------------------------------------------------------------------------------------------------------------------
+
+<details><summary><strong>   高斯分布某个点的概率密度函数值  </strong></summary><blockquote>
+    
+ ```python
+    mean = np.array([0,0])
+    cov = np.eye(2)
+    point1 = np.array([0,0])
+    point2 = np.array([1,1])
+    mvnormal = multivariate_normal(mean, cov, allow_singular=True)
+    score1 = -mvnormal.logpdf(point1)
+    pdf1 = mvnormal.pdf(point1)
+    score2 = -mvnormal.logpdf(point2)
+    pdf2 = mvnormal.pdf(point2)
+    print(pdf1, score1)
+    print(pdf2, score2)
+
+    # pdf1, score1: 0.15915494309189535 1.8378770664093453
+    # pdf2, score2: 0.05854983152431917 2.8378770664093453
+ ```
+ 
+</blockquote></details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
