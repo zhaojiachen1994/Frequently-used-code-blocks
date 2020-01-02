@@ -142,9 +142,27 @@ setup_seed(20)
 
 </blockquote></details>
 
+-----------------------------------------------------------------------------------------------------------------------------------
 
+<details><summary><strong>   样本和标签两个array构造DataLoader  </strong></summary><blockquote>
+    
+ ```python
+    from torch.utils.data import DataLoader, Dataset, TensorDataset
+    X = np.linspace(1,30, 30).reshape([15, 2])
+    y = np.linspace(1,15, 15)
+    X = torch.from_numpy(X).float()
+    y = torch.from_numpy(y).float()
+    data_loader = DataLoader(dataset=TensorDataset(X, y), batch_size=5, shuffle=False, drop_last=False)
+    for [x_batch, y_batch] in data_loader:
+        print(x_batch)
+        print(y_batch)
+    print(len(data_loader))
+ ```
+
+</blockquote></details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
