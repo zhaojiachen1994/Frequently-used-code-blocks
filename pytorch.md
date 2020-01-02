@@ -127,7 +127,23 @@ setup_seed(20)
 ```
 </details>
 
+-----------------------------------------------------------------------------------------------------------------------------------
 
+<details><summary><strong>   array to dataloader  </strong></summary><blockquote>
+
+```python
+    X = np.linspace(1,1200, 1200).reshape([600,2])
+    data_loader = DataLoader(dataset=X, batch_size=30, shuffle=False, drop_last=False)
+    for x in data_loader:
+        print(x.shape)
+    print(len(data_loader))
+```
+
+</blockquote></details>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
