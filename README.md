@@ -33,22 +33,23 @@ Some frequently used code blocks.
   
 - TEMPLATE
 <details><summary><strong>   双折叠  </strong></summary><blockquote>
-      <details><summary><strong>   Title  </strong></summary><blockquote>
-      <details><summary><strong>   Code  </strong></summary><blockquote>
+  
+        <details><summary><strong>   Title  </strong></summary><blockquote>
+        <details><summary><strong>   Code  </strong></summary><blockquote>
 
-      ```matlab
-      code
-      ```
+        ```matlab
+        code
+        ```
 
-      </blockquote></details>
+        </blockquote></details>
 
-      <details open><summary><strong>   Figure  </strong></summary>  
-      <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-      </details>
+        <details open><summary><strong>   Figure  </strong></summary>  
+        <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
+        </details>
 
-      </blockquote></details>
+        </blockquote></details>
 
-      -----------------------------------------------------------------------------------------------------------------------------------
+        -----------------------------------------------------------------------------------------------------------------------------------
 
 </blockquote></details>
 
