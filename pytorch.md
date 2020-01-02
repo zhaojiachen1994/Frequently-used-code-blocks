@@ -129,9 +129,10 @@ setup_seed(20)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-<details><summary><strong>   array to dataloader  </strong></summary><blockquote>
+<details><summary><strong>   Array to dataloader  </strong></summary><blockquote>
 
 ```python
+    from torch.utils.data import DataLoader
     X = np.linspace(1,1200, 1200).reshape([600,2])
     data_loader = DataLoader(dataset=X, batch_size=30, shuffle=False, drop_last=False)
     for x in data_loader:
