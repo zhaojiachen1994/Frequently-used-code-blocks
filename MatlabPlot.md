@@ -8,27 +8,16 @@
 （2）坐标轴设置方法
 ```matlab
 axis off;% 去掉坐标轴
-
 axistight;% 紧坐标轴
-
 axisequal;% 等比坐标轴
-
 axis([-0.1, 8.1, -1.1, 1.1]);% 坐标轴的显示范围
-
 % gca: gca, h=figure(...);
-
 set(gca,'XLim',[3 40]);% X轴的数据显示范围
-
 set(gca,'XTick',[-3.14,0,3.14] );% X轴的记号点
-
 set(gca,'XTicklabel',{'-pi','0','pi'});% X轴的记号
-
 set(gca,'XTick', []);% 清除X轴的记号点
-
 set(gca,'XGrid','on');% X轴的网格
-
 set(gca,'XDir','reverse');% 逆转X轴
-
 set(gca,'XColor','red');% X轴的颜色
 '''
 
