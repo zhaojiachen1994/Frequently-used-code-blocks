@@ -1,11 +1,18 @@
 <details><summary><strong>  plot坐标轴设置方法  </strong></summary><blockquote>
-（1）去除坐标轴使用axis off；/
+（1）去除坐标轴使用axis off
+      
       如果想要x的坐标没有：set（gca,'xtick',[])
+      
       关闭边框：set(gcf,'box','off')
+      
 （2）坐标轴设置方法
+
 axis off;% 去掉坐标轴
+
 axistight;% 紧坐标轴
+
 axisequal;% 等比坐标轴
+
 axis([-0.1, 8.1, -1.1, 1.1]);% 坐标轴的显示范围
 
 % gca: gca, h=figure(...);
