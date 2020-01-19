@@ -32,14 +32,12 @@ set(gca,'XDir','reverse');% 逆转X轴
 set(gca,'XColor','red');% X轴的颜色
 
 1. axis([xmin xmax ymin ymax])
-
 设置当前图形的坐标范围，分别为x轴的最小、最大值，y轴的最小最大值
 2. V=axis
 
 返回包含当前坐标范围的一个行向量
 
 3. axis auto
-
 将坐标轴刻度恢复为自动的默认设置
 
 4. axis manual
