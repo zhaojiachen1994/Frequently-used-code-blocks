@@ -6,7 +6,7 @@
       关闭边框：set(gcf,'box','off')
       
 （2）坐标轴设置方法
-
+```matlab
 axis off;% 去掉坐标轴
 
 axistight;% 紧坐标轴
@@ -30,6 +30,7 @@ set(gca,'XGrid','on');% X轴的网格
 set(gca,'XDir','reverse');% 逆转X轴
 
 set(gca,'XColor','red');% X轴的颜色
+'''
 
 1. axis([xmin xmax ymin ymax])
 设置当前图形的坐标范围，分别为x轴的最小、最大值，y轴的最小最大值
@@ -56,10 +57,8 @@ set(gca,'XColor','red');% X轴的颜色
 12. axis vis3d
 冻结屏幕高宽比，使得一个三维对象的旋转不会改变坐标轴的刻度显示
 13. axis off
-
 关闭所有的坐标轴标签、刻度、背景
 14. axis on
-
 打开所有的坐标轴标签、刻度、背景
 
 
