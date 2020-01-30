@@ -1,7 +1,7 @@
 <details>
 <summary><strong>   Matplotlib 参考链接  </strong></summary>
   
- 
+ [Legend](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html)
  
 </details>
 
