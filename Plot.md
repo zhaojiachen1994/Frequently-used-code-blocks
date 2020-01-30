@@ -213,4 +213,21 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   Matplotlib 画图模板  </strong></summary>
+  
+ ```python
+    
+
+    plt.show()
+    f.savefig(f"roc_{self.datasets[0].data[0].name}.pdf", bbox_inches='tight')
+ ```
+ 
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
 to do: from tabulate import tabulate 直接用python将字典生成latex的表格或者psql的表格。
