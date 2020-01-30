@@ -209,7 +209,7 @@ end
  
 </details>
 
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="300" height="150"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
