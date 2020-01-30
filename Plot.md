@@ -174,5 +174,40 @@ end
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
+<details><summary><strong>   Python ROC curves  </strong></summary><blockquote>
+ ```python
+    def plotroc(self, scoresdf):
+  
+        # scoresdf is Dataframe with detetors(classifier) name as column name, y_pred as df.data
+        # print(scoresdf.head())
+        y_true= scoresdf['y_true']
+        fpr = dict()
+        tpr = dict()
+        roc_auc = dict()
+
+        f = plt.figure()
+        lw = 2
+        colors = cycle(['aqua', 'darkorange', 'cornflowerblue', 'deeppink','navy' ])
+        for det,color in zip(detectors, colors):
+            fpr[det.name], tpr[det.name], _ = roc_curve(y_true=y_true, y_score=scoresdf[det.name])
+            roc_auc[det.name] = round(auc(fpr[det.name], tpr[det.name]), 2)
+            plt.plot(fpr[det.name], tpr[det.name], color=color, lw=lw, label=f'{det.name} (area={roc_auc[det.name]})')
+        print(roc_auc)
+        plt.plot([0, 1], [0, 1], color='green', lw=lw, linestyle='--')
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate', fontsize=16)
+        plt.ylabel('True Positive Rate', fontsize=16)
+        plt.title(f'{self.datasets[0].data[0].name}')
+        plt.legend(loc="lower right", fontsize=12)
+
+        plt.show()
+        f.savefig(f"roc_{self.datasets[0].data[0].name}.pdf", bbox_inches='tight')
+ ```
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
+</blockquote></details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 to do: from tabulate import tabulate 直接用python将字典生成latex的表格或者psql的表格。
