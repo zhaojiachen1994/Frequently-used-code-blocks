@@ -174,10 +174,12 @@ end
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-<details><summary><strong>   Python ROC curves  </strong></summary><blockquote>
- ```python
-    def plotroc(self, scoresdf):
+<details>
+<summary><strong>   Python ROC curves  </strong></summary>
   
+ ```python
+    
+    def plotroc(self, scoresdf):
         # scoresdf is Dataframe with detetors(classifier) name as column name, y_pred as df.data
         # print(scoresdf.head())
         y_true= scoresdf['y_true']
@@ -204,9 +206,10 @@ end
         plt.show()
         f.savefig(f"roc_{self.datasets[0].data[0].name}.pdf", bbox_inches='tight')
  ```
+ 
+</details>
 
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-</blockquote></details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
