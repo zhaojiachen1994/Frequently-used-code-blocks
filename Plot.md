@@ -1,10 +1,10 @@
 <details>
 <summary><strong>   Matplotlib 参考链接  </strong></summary>
   
- - [Legend](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html)
+
  - [Color references](http://tableaufriction.blogspot.com/2012/11/finally-you-can-use-tableau-data-colors.html)
  - [Color names](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
- 
+ - [Legend](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html)
  
 </details>
 
