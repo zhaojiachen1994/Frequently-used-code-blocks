@@ -217,15 +217,51 @@ end
 <summary><strong>   Matplotlib 画图模板  </strong></summary>
   
  ```python
-    
+    t = np.linspace(1,100,100)
+    data1 = np.random.rand(100)*0.5
+    data2 = np.random.rand(100)*0.6+0.5
+# STEP1: CREATE FIGURE
+    fig = plt.figure(num=None, figsize=(6.4, 4.8), dpi=100, facecolor='w', edgecolor='w')
+    # TIP: default figure size is (6.4, 4.8); default dpi is 100;
+# STEP2: CREATE AXES
+    ax = plt.subplot(111, facecolor='antiquewhite')
+    # TIP: set(111) when want to plot one
+# STEP3: SET THE PARAS
+    lw = 1
+    color = ['b','r']
+    xyticksize = 8
+    xylabelfontsize = 14
+    titlefontsize = 20
+    legendfontsize = 12
+# STEP4: PLOT THE FIGURE
+    ax.plot(t, data1, lw=lw, color=color[0], label='blue line')
+    ax.plot(t, data2, lw=lw, color=color[1], label='red line')
+    ax.legend(loc="lower right", fontsize=legendfontsize)
+    # legend set: https: // matplotlib.org / api / _as_gen / matplotlib.pyplot.legend.html
+# STEP5: ADJUST THE PLOT
+    ax.set_title('(a) Title', fontsize = titlefontsize)
+    ax.set_xlabel('Time', fontsize=xylabelfontsize)
+    ax.set_ylabel('Value (%)',fontsize=xylabelfontsize)
 
+    ax.set_xlim([0, 100])
+    ax.set_ylim([-0.5, 1.5])
+
+    ax.grid(True, axis='both')
+    ax.tick_params(axis='both', direction='in', length=3, which='major', labelsize=xyticksize)
+    # TIP: axis could be {'x', 'y', 'both'}
+    #      grid color, linestyle, linewidth can be adjusted by tick_params
+
+    ax.set_xticks([0, 20, 25, 40, 60, 80, 100])
+    ax.set_yticks([-0.5, 0, 0.5, 1, 1.5])
+
+    fig.tight_layout()
     plt.show()
-    f.savefig(f"roc_{self.datasets[0].data[0].name}.pdf", bbox_inches='tight')
+    f.savefig(f"figname.pdf")
  ```
  
 </details>
 
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/matplotlib_template.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
