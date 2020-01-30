@@ -55,15 +55,19 @@ Some frequently used code blocks.
 
 <details><summary><strong>   单折叠  </strong></summary><blockquote>
   
-    <details><summary><strong>   Title  </strong></summary><blockquote>
-     ```matlab
-     code
+    <details>
+    <summary><strong>   Python ROC curves  </strong></summary>
+
+     ```python
+     
      ```
-    
-    <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/groupedbar.png" width="300" height="150"/></div>
-    </blockquote></details>
+
+    </details>
+
+    <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
 
     -----------------------------------------------------------------------------------------------------------------------------------
+
 </blockquote></details>
 
 seeds = np.random.randint(np.iinfo(np.uint32).max, size=RUNS, dtype=np.uint32)
