@@ -32,6 +32,7 @@ Some frequently used code blocks.
   - Results(Fold)                 - fold to save evaluation results
     - logs(Fold)                      - fold to save logging file
     - csv(Fold)                       - fold to save the csv results
+    - fig(Fold)                       - fold to save fig if needed
     
 - Analysis(Fold)               - 分析实验方法
   - evaluate_component1.py(exp)   - 衡量一个部分的效果
@@ -39,6 +40,17 @@ Some frequently used code blocks.
   - Results(Fold)                 - fold to save evaluation results
     - logs(Fold)                      - fold to save logging file
     - csv(Fold)                       - fold to save the csv results
+    - fig(Fold)                       - fold to save fig if needed
+    
+- Refpackages(Fold)            - 保存参考代码
+  - Package1(Fold)                - 下载保存package1, indluding the necessary dataset
+  - rerunpackage1(exp)            - rerun package1，确定代码的正确性
+  - Mypackage1.py(Class)          - 重新包装代码已适用于自己,(从Package1中中继承类)
+  - Checkpackage1.py(exp)         - 测试代码是否适用于自己,(从models,Evaluation中继承方法)
+  - Results(Fold)                 - fold to save evaluation results
+    - logs(Fold)                      - fold to save logging file
+    - csv(Fold)                       - fold to save the csv results
+    - fig(Fold)                       - fold to save fig if needed
 </pre>
 
 TIPS:
