@@ -4,13 +4,14 @@ Some frequently used code blocks.
 
 <details>
 <summary><strong>   Python project structure  </strong></summary>
-  
+<pre>
+
 - Dataset(FOLD)
   
   - dataset1(FOLD)      用来保存数据
   - dataset2(FOLD)      用来保存数据
   - Dataset.py(File)
-
+</pre>
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
