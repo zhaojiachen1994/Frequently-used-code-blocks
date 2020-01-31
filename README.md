@@ -9,33 +9,37 @@ Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's Ano
 
   
 <pre>
-- Dataset(Fold)           - 保存和处理真实数据集
-  - dataset1(Fold)          - 用来保存数据
-  - dataset2(Fold)          - 用来保存数据
-  - Dataset.py(class)       - 数据集Class
+- Dataset(Fold)                - 保存和处理真实数据集
+  - dataset1(Fold)                - 用来保存数据
+  - dataset2(Fold)                - 用来保存数据
+  - dataset.py(class)             - 数据集Class
   
-- Simulation(Fold)        - 生成保存模拟数据集
-  - dataset1(Fold)          - 用来保存数据
-  - dataset1(Fold)          - 用来保存数据
-  - simulation.py(Class)    - 仿真数据类
+- Simulation(Fold)             - 生成保存模拟数据集
+  - dataset1(Fold)                - 用来保存数据
+  - dataset1(Fold)                - 用来保存数据
+  - simulation.py(Class)          - 仿真数据类
   
-- Models(Fold)            - 模型文件夹
-  - algorithm.utils.py(Base)      - base function for other model 模型的通用函数定义
-  - model1.py(Class)               - 定义model1的类
-  - model2.py(Class)               - 定义model2的类
+- Models(Fold)                 - 模型文件夹
+  - algorithm_utils.py(Base)      - base function for other model 模型的通用函数定义
+  - model1.py(Class)              - 定义model1的类
+  - model2.py(Class)              - 定义model2的类
   
-- Evaluation(Fold)        - 评价网络优劣
-  - config.py(Helper)               - copy from DeepADoTS Des: create the logging file
-  - evaluator(Class)                - input is list of dataset, list of models
-  - evaluate_self(Exp)              - experiment to evaluate proposed method 
-  - evaluate_deep(Exp)              - experiment to evaluate other deep method
-  - evaluate_sk(Exp)                - experiment to evaluate traditional method
-  - Results(Fold)                   - fold to save evaluation results
-    - logs(Fold)                          - fold to save logging file
-    - csv(Fold)                           - fold to save the csv results
+- Evaluation(Fold)             - 评价网络优劣
+  - config.py(Helper)             - copy from DeepADoTS Des: create the logging file
+  - evaluator(Class)              - input is list of dataset, list of models
+  - evaluate_self(Exp)            - experiment to evaluate proposed method 
+  - evaluate_deep(Exp)            - experiment to evaluate other deep method
+  - evaluate_sk(Exp)              - experiment to evaluate traditional method
+  - Results(Fold)                 - fold to save evaluation results
+    - logs(Fold)                      - fold to save logging file
+    - csv(Fold)                       - fold to save the csv results
     
-- Analysis(Fold)  
-  
+- Analysis(Fold)               - 分析实验方法
+  - evaluate_component1.py(exp)   - 衡量一个部分的效果
+  - plotExample1.py(Exp)          - 可视化一个数据集的结果(从models,Evaluation中继承方法)
+  - Results(Fold)                 - fold to save evaluation results
+    - logs(Fold)                      - fold to save logging file
+    - csv(Fold)                       - fold to save the csv results
 </pre>
 </details>
 
