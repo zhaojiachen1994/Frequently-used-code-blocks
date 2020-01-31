@@ -1,6 +1,16 @@
 # Frequently-used-code-blocks
 Some frequently used code blocks.
 ---
+
+<details>
+<summary><strong>   Python project structure  </strong></summary>
+-Dataset
+
+
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
 - Pytorch
   - Device configuration
   - 统计网络的参数数量
