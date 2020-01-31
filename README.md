@@ -3,7 +3,7 @@ Some frequently used code blocks.
 ---
 
 <details>
-<summary><strong>   Python project structure  </strong></summary>
+<summary><strong>   Python project structure for a learning paper  </strong></summary>
 
   Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's AnomalyDetection
   
