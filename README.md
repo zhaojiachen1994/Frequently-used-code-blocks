@@ -13,14 +13,17 @@ Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's Ano
   - dataset1(Fold)          - 用来保存数据
   - dataset2(Fold)          - 用来保存数据
   - Dataset.py(class)       - 数据集Class
+  
 - Simulation(Fold)        - 生成保存模拟数据集
   - dataset1(Fold)          - 用来保存数据
   - dataset1(Fold)          - 用来保存数据
   - simulation.py(Class)    - 仿真数据类
+  
 - Models(Fold)            - 模型文件夹
   - algorithm.utils.py(Base)      - base function for other model 模型的通用函数定义
   - model1.py(Class)               - 定义model1的类
   - model2.py(Class)               - 定义model2的类
+  
 - Evaluation(Fold)        - 评价网络优劣
   - config.py(Helper)               - copy from DeepADoTS Des: create the logging file
   - evaluator(Class)                - input is list of dataset, list of models
@@ -30,6 +33,7 @@ Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's Ano
   - Results(Fold)                   - fold to save evaluation results
     - logs(Fold)                          - fold to save logging file
     - csv(Fold)                           - fold to save the csv results
+    
 - Analysis(Fold)  
   
 </pre>
