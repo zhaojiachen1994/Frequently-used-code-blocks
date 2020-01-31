@@ -5,8 +5,7 @@ Some frequently used code blocks.
 <details>
 <summary><strong>   Python project structure  </strong></summary>
 
-Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's AnomalyDetection
-
+  Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's AnomalyDetection
   
 <pre>
 - Dataset(Fold)                - 保存和处理真实数据集
