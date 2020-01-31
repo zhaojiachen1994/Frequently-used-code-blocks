@@ -9,8 +9,8 @@ Some frequently used code blocks.
   
 <pre>
 - Dataset(Fold)                - 保存和处理真实数据集
-  - dataset1(Fold)                - 用来保存数据
-  - dataset2(Fold)                - 用来保存数据
+  - dataset1(Fold)                - 用来保存数据, with Figure
+  - dataset2(Fold)                - 用来保存数据, with Figure
   - dataset.py(class)             - 数据集Class
   
 - Simulation(Fold)             - 生成保存模拟数据集
