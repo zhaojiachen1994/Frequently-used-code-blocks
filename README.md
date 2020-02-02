@@ -13,10 +13,10 @@ Some frequently used code blocks.
   - dataset2(Fold)                - 用来保存数据, with Figure
   - dataset.py(class)             - 数据集Class
   
-- Simulation(Fold)             - 生成保存模拟数据集
+- Synthetic Dataset(Fold)             - 生成保存模拟数据集
   - dataset1(Fold)                - 用来保存数据
   - dataset1(Fold)                - 用来保存数据
-  - simulation.py(Class)          - 仿真数据类
+  - Synthetic.py(Class)          - 仿真数据类
   
 - Models(Fold)                 - 模型文件夹
   - algorithm_utils.py(Base)      - base function for other model 模型的通用函数定义
