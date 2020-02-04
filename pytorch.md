@@ -174,8 +174,8 @@ setup_seed(20)
     conda activate pytorch
 
 - Codes
-    from tensorboardX import SummaryWriter (or from torch.utils.tensorboard import SummaryWriter\\
-    writer = SummaryWriter('/tmp/runs') # the path should be difined as exact this \\
+    from tensorboardX import SummaryWriter (or from torch.utils.tensorboard import SummaryWriter \n
+    writer = SummaryWriter('/tmp/runs') # the path should be difined as exact this \n
     writer.add_image('four_fashion_mnist_images', img_grid)
  
 
