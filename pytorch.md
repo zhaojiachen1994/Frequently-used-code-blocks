@@ -166,16 +166,21 @@ setup_seed(20)
 <details>
 <summary><strong>   tensorboardX 可视化(远程) </strong></summary>
 
-- Install packages 
-    - conda install -c conda-forge tensorboard
-    - conda install -c conda-forge tensorboardx
+- Install packages and activate the pytorch environment
+    conda install -c conda-forge tensorboard
+    
+    conda install -c conda-forge tensorboardx
  
+    conda activate pytorch
+
+- Codes
+    from tensorboardX import SummaryWriter (or from torch.utils.tensorboard import SummaryWriter\\
+    writer = SummaryWriter('/tmp/runs') # the path should be difined as exact this \\
+    writer.add_image('four_fashion_mnist_images', img_grid)
  
 
 
 </details>
-
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
