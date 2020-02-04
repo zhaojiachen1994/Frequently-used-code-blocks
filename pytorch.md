@@ -174,9 +174,19 @@ setup_seed(20)
     conda activate pytorch
 
 - Codes
-    from tensorboardX import SummaryWriter (or from torch.utils.tensorboard import SummaryWriter \n
-    writer = SummaryWriter('/tmp/runs') # the path should be difined as exact this \n
+    from tensorboardX import SummaryWriter (or from torch.utils.tensorboard import SummaryWriter 
+    
+    writer = SummaryWriter('/tmp/runs') # the path should be difined as exact this 
+    
     writer.add_image('four_fashion_mnist_images', img_grid)
+
+- remote host (in terminal)
+    tensorboard -- logdir=/tmp/runs --port=8887
+    
+- local host (in window terminal)
+    ssh -N -L localhost:8888:localhost:8887 zjc@131.128.54.107
+    
+    open brower with localhost:8888
  
 
 
