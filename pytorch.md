@@ -163,6 +163,22 @@ setup_seed(20)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   tensorboardX 可视化(远程) </strong></summary>
+
+- Install packages 
+    - conda install -c conda-forge tensorboard
+    - conda install -c conda-forge tensorboardx
+ 
+ 
+
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
 
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
