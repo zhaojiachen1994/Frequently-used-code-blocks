@@ -198,6 +198,70 @@ setup_seed(20)
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   Pytorch + tensorboardX example  </strong></summary>
+
+ ```python
+import numpy as np
+import random
+import torch
+import torch.nn as nn
+from torch.autograd import Variable
+from tensorboardX import SummaryWriter
+
+
+class AutoEncoderModule(nn.Module):#, PyTorchUtils
+    def __init__(self, n_features: int, hidden_size: int, seed: int):
+        super().__init__()
+        torch.manual_seed(seed)
+        input_length = n_features
+        # creates powers of two between eight and the next smaller power from the input_length
+        dec_steps = 2 ** np.arange(max(np.ceil(np.log2(hidden_size)), 2), np.log2(input_length))[1:]
+        dec_setup = np.concatenate([[hidden_size], dec_steps.repeat(2), [input_length]])
+        enc_setup = dec_setup[::-1]
+        layers = np.array([[nn.Linear(int(a), int(b)), nn.Tanh()] for a, b in enc_setup.reshape(-1, 2)]).flatten()[:-1]
+        self._encoder = nn.Sequential(*layers)
+        layers = np.array([[nn.Linear(int(a), int(b)), nn.Tanh()] for a, b in dec_setup.reshape(-1, 2)]).flatten()[:-1]
+        self._decoder = nn.Sequential(*layers)
+
+    def forward(self, input_batch=None, target_batch=None, return_latent: bool = False):
+        '''
+        input shape is [batch_size, sequence_length, n_feature]
+        '''
+        enc = self._encoder(input_batch)
+        dec = self._decoder(enc)
+        loss = (target_batch - dec).view([-1, 2])
+        loss1=loss[:,0]+Variable(torch.Tensor([2.]))    # operate with a constant
+        loss2=torch.log(loss[:,1]) # log computing
+        loss3=loss1+loss2 # slice a tensor and add its elements
+        return loss3, loss4
+
+
+def checkADE():
+    seed=0
+    setup_seed(seed)
+    n_features = 2
+    n_samples = 1
+    writer = SummaryWriter('/tmp/runs1')
+    input = np.random.rand(n_samples, n_features)
+    target = np.random.rand(n_samples, n_features)
+    input = torch.from_numpy(input).float()
+    target = torch.from_numpy(target).float()
+    model = AutoEncoderModule(n_features=n_features, hidden_size=1, seed=seed)
+    output = model.forward(input, target)
+
+    writer.add_graph(model, (input, target))
+    writer.close()
+
+if __name__ == "__main__":
+    checkADE()
+ ```
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/tensorboardexample.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
