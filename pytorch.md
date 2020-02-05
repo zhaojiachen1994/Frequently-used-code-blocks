@@ -259,7 +259,7 @@ if __name__ == "__main__":
 
 </details>
 
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/tensorboardexample.png" width="200" height="120"/></div>
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/tensorboardexample.PNG" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
