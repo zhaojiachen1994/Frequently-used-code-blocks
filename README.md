@@ -64,7 +64,7 @@ TIPS:
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-- Pytorch
+- [Pytorch](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/pytorch.md)
   - Device configuration
   - 统计网络的参数数量
   - 查看网络参数值
@@ -97,7 +97,7 @@ TIPS:
   - 实验结果保存至log和csv文件
   
   
-- Algorithm
+- [Algorithm](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/algorithm.md)
   - Evaluation for classification
   - Evaluation for clustering
   - Weighted covariance computing
@@ -105,10 +105,10 @@ TIPS:
   - OneClassSVM for outlier detection, AUC to evaluate the results
   - 高斯分布某个点的概率密度函数值
 
-- sklearn
+- [sklearn](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/sklearn.md)
   - generate the classification task
 
-- Data processing
+- [Data processing](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Data%20Processing.md)
   - 利用sklearn和Seglearn来构造多维的时间序列，并用划窗分割
   - 利用numpy和random生成三角函数曲线，并添加高斯噪声
   - 利用numpy和torch生成用于测试LSTM的加法测试数据
