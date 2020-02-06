@@ -74,9 +74,13 @@ TIPS:
   - Pytorch 调整optimizer的learning rate
 - [Plot](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Plot.md)
   - Matplotlib参考链接
-  - 绘制groupbar(matlab)
-  - 一维高斯混合模型的拟合曲线绘制(matlab)
-  
+  - 绘制groupbar (matlab)
+  - 一维高斯混合模型的拟合曲线绘制 (matlab)
+  - 2维高斯混合模型的拟合曲线绘制 (matlab)
+  - 一维高斯模型的拟合曲线绘制 (python)
+  - Group bars with variance (matlab)
+  - Python ROC curves (python)
+  - Matplotlib 画图模板 (python)
   
 - File process
   - matlab
