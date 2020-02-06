@@ -72,9 +72,11 @@ TIPS:
   - LSTMCell 的输入输出
   - Pytorch 如何保存模型加载模型
   - Pytorch 调整optimizer的learning rate
-- Plot
-  - 
-  - python
+- [Plot](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Plot.md)
+  - Matplotlib参考链接
+  - 绘制groupbar(matlab)
+  - 一维高斯混合模型的拟合曲线绘制(matlab)
+  
   
 - File process
   - matlab
