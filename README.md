@@ -88,6 +88,7 @@ TIPS:
   - Group bars with variance (matlab)
   - Python ROC curves (python)
   - Matplotlib 画图模板 (python)
+  - plot坐标轴设置方法 (matlab)
   
 - File process
   - matlab
@@ -115,6 +116,7 @@ TIPS:
   - seglearn.SegmentXY自定义Y的提取方法 eg:max
   - 负指数曲线的变化趋势
   - 保存实验组的结果到csv文件
+  - 
   
   
 - TEMPLATE
