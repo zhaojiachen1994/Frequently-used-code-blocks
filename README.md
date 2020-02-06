@@ -5,7 +5,7 @@ Some frequently used code blocks.
 <details>
 <summary><strong>   Python project structure for a learning paper  </strong></summary>
 
-  Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS]), Self's AnomalyDetection
+  Reference: [DeepADoTS](https://github.com/KDD-OpenSource/DeepADoTS), Self's AnomalyDetection
   
 <pre>
 - Dataset(Fold)                - 保存和处理真实数据集
@@ -73,8 +73,7 @@ TIPS:
   - Pytorch 如何保存模型加载模型
   - Pytorch 调整optimizer的learning rate
 - Plot
-  - matlab
-    - 绘制groupbars
+  - 
   - python
   
 - File process
