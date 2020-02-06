@@ -144,4 +144,11 @@ def oneSVMmodel(X,y, gamma = 1e-6):
  
 </blockquote></details>
 
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/gaussianpdf.png" width="200" height="120"/></div>
+
+
 -----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
