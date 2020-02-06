@@ -263,6 +263,39 @@ if __name__ == "__main__":
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   如何查看pytorch中tensor的梯度  </strong></summary>
+
+[Offical reference](https://pytorch.org/tutorials/beginner/former_torchies/autograd_tutorial.html)
+[Grad is None even when requires_grad=True] (https://discuss.pytorch.org/t/grad-is-none-even-when-requires-grad-true/29826)
+
+ ```python
+    input= torch.rand([1,2])
+    encoder = nn.Linear(2, 1)
+    decoder = nn.Linear(1,2)
+    enc = encoder(input)
+    dec = decoder(enc)
+    enc.retain_grad() # must retain_grad before backward, or it will be reset during backward
+    dec.backward(input)
+    for param in decoder.parameters():
+        print(f'decoder parameter grad:, \n{param.grad}')
+    print(f'enc.grad: {enc.grad}')
+ ```
+ 
+```python
+OUTPUT:
+    decoder parameter grad:, 
+    tensor([[-0.0341],
+            [-0.2130]])
+    decoder parameter grad:, 
+    tensor([0.1474, 0.9200])
+    enc.grad: tensor([[-0.1953]])
+ ```
+
+</details>
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
 https://zhuanlan.zhihu.com/p/39020473
