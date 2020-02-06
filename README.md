@@ -110,6 +110,12 @@ TIPS:
   - 利用numpy和random生成三角函数曲线，并添加高斯噪声
   - 利用numpy和torch生成用于测试LSTM的加法测试数据
   - Transfer time series prediction task to supervised learning task
+  - 1D autoregressive time series
+  - Extract the same classes from two sets sharing some classes
+  - seglearn.SegmentXY自定义Y的提取方法 eg:max
+  - 负指数曲线的变化趋势
+  - 保存实验组的结果到csv文件
+  
   
 - TEMPLATE
 <details><summary><strong>   双折叠  </strong></summary><blockquote>
