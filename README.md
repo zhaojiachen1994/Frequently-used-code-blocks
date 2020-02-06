@@ -95,7 +95,12 @@ TIPS:
   - python
   
 - Algorithm
-  - The clustering evaluation metric from sklearn
+  - Evaluation for classification
+  - Evaluation for clustering
+  - Weighted covariance computing
+  - 增量式加权协方差计算
+  - OneClassSVM for outlier detection, AUC to evaluate the results
+  - 高斯分布某个点的概率密度函数值
 
 - sklearn
   - generate the classification task
