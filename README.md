@@ -71,7 +71,14 @@ TIPS:
   - LSTM的输入输出形状
   - LSTMCell 的输入输出
   - Pytorch 如何保存模型加载模型
+  - 设置随机种子，固定网络的初始权重
+  - 高斯法初始化网络权重
+  - Array to dataloader
+  - 样本和标签两个array构造DataLoader
   - Pytorch 调整optimizer的learning rate
+  - tensorboardX 可视化(远程)
+  - Pytorch + tensorboardX example
+  
 - [Plot](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Plot.md)
   - Matplotlib参考链接
   - 绘制groupbar (matlab)
