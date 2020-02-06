@@ -266,9 +266,8 @@ if __name__ == "__main__":
 <details>
 <summary><strong>   如何查看pytorch中tensor的梯度  </strong></summary>
 
-[Offical reference](https://pytorch.org/tutorials/beginner/former_torchies/autograd_tutorial.html)
-
-[Grad is None even when requires_grad=True](https://discuss.pytorch.org/t/grad-is-none-even-when-requires-grad-true/29826)
+Ref1: [Offical reference](https://pytorch.org/tutorials/beginner/former_torchies/autograd_tutorial.html)
+Ref2: [Grad is None even when requires_grad=True](https://discuss.pytorch.org/t/grad-is-none-even-when-requires-grad-true/29826)
 
  ```python
     input= torch.rand([1,2])
