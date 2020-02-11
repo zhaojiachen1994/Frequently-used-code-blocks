@@ -20,10 +20,14 @@ plt.show()
 
 </details>
 
+-----------------------------------------------------------------------------------------------------------------------------------
+
 <details>
 <summary><strong>   precision, recall, f1-score for outlier detection  </strong></summary>
 
 [Fig from wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+
+- Recall 描述了outlier是否找全 Precision 描述了outlier是否找对 f1-score 是两者的调和平均数 
 
  ```python
   y_true = np.array([1,1,1,0,0,0,0,0,0,0])
@@ -53,6 +57,15 @@ plt.show()
     print(f'Recall={TPR_type2:0.4f}(default:{Recall_default:0.4f})\t'
           f'Precision={PPV_type2:0.4f}(default:{Precision_default:0.4f})\t'
           f'f1={f1_type2:0.4f}(default:{f1_default:0.4f})')
+          
+          
+Results:
+------------------------------------------------------------------------------------------
+Type I error, a 0 is predicted as 1, a normal as outlier
+Recall=1.0000(default:1.0000)	Precision=0.7500(default:0.7500)	f1=0.8571(default:0.8571)
+------------------------------------------------------------------------------------------
+Type II error, a 1 is predicted as 0, a outlier as anomaly
+Recall=0.6667(default:0.6667)	Precision=1.0000(default:1.0000)	f1=0.8000(default:0.8000)
  ```
 
 </details>
