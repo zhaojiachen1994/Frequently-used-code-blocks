@@ -21,6 +21,8 @@ plt.show()
 <details>
 <summary><strong>   precision, recall, f1-score for outlier detection  </strong></summary>
 
+(Fig from wiki)[https://en.wikipedia.org/wiki/Precision_and_recall]
+
  ```python
   y_true = np.array([1,1,1,0,0,0,0,0,0,0])
     y_pred_type1 = np.array([1,1,1,1,0,0,0,0,0,0])
