@@ -1,6 +1,8 @@
 <details>
 <summary><strong>   Generate the classification task  </strong></summary>
-[Ref1](https://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html#sphx-glr-auto-examples-datasets-plot-random-dataset-py)    [Ref2](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html)
+  
+[Ref1](https://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html#sphx-glr-auto-examples-datasets-plot-random-dataset-py)    
+[Ref2](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html)
   
 ```python
 from sklearn.datasets import make_moons, make_circles, make_classification
