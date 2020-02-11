@@ -32,7 +32,8 @@ plt.show()
 - f1-score 是两者的调和平均数 
 
  ```python
-  y_true = np.array([1,1,1,0,0,0,0,0,0,0])
+    from sklearn.metrics import recall_score, precision_score, f1_score
+    y_true = np.array([1,1,1,0,0,0,0,0,0,0])
     y_pred_type1 = np.array([1,1,1,1,0,0,0,0,0,0])
     y_pred_type2 = np.array([1,1,0,0,0,0,0,0,0,0])
 
