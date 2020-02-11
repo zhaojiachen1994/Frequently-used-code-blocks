@@ -1,5 +1,7 @@
-- Generate the classification task 
-
+<details>
+<summary><strong>   Generate the classification task  </strong></summary>
+(Ref1)[https://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html#sphx-glr-auto-examples-datasets-plot-random-dataset-py](Ref2)[https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html]
+  
 ```python
 from sklearn.datasets import make_moons, make_circles, make_classification
 from sklearn.model_selection import train_test_split
@@ -13,5 +15,44 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_
 plt.scatter(X[:,0],X[:,1],c=y)
 plt.show()
 ```
-  - https://scikit-learn.org/stable/auto_examples/datasets/plot_random_dataset.html#sphx-glr-auto-examples-datasets-plot-random-dataset-py
-  - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.make_classification.html
+
+</details>
+
+<details>
+<summary><strong>   precision, recall, f1-score for outlier detection  </strong></summary>
+
+ ```python
+  y_true = np.array([1,1,1,0,0,0,0,0,0,0])
+    y_pred_type1 = np.array([1,1,1,1,0,0,0,0,0,0])
+    y_pred_type2 = np.array([1,1,0,0,0,0,0,0,0,0])
+
+    print('-' * 90)
+    print(f'Type I error, a 0 is predicted as 1, a normal as outlier')
+    Recall_default = recall_score(y_true, y_pred_type1)
+    Precision_default = precision_score(y_true=y_true, y_pred=y_pred_type1)
+    TPR_type1 = recall_score(y_true=y_true, y_pred=y_pred_type1, average=None, labels=[1])[0]
+    PPV_type1 = precision_score(y_true=y_true, y_pred=y_pred_type1, average=None, labels=[1])[0]
+    f1_type1 = f1_score(y_true=y_true, y_pred=y_pred_type1, average=None, labels=[1])[0]
+    f1_default = f1_score(y_true=y_true, y_pred=y_pred_type1)
+    print(f'Recall={TPR_type1:0.4f}(default:{Recall_default:0.4f})\t'
+          f'Precision={PPV_type1:0.4f}(default:{Precision_default:0.4f})\t'
+          f'f1={f1_type1:0.4f}(default:{f1_default:0.4f})')
+    
+    print('-'*90)
+    print(f'Type II error, a 1 is predicted as 0, a outlier as anomaly')
+    Recall_default = recall_score(y_true, y_pred_type2)
+    Precision_default = precision_score(y_true=y_true, y_pred=y_pred_type2)
+    TPR_type2 = recall_score(y_true=y_true, y_pred=y_pred_type2, average=None, labels=[1])[0]
+    PPV_type2 = precision_score(y_true=y_true, y_pred=y_pred_type2, average=None, labels=[1])[0]
+    f1_type2 = f1_score(y_true=y_true, y_pred=y_pred_type2, average=None, labels=[1])[0]
+    f1_default = f1_score(y_true=y_true, y_pred=y_pred_type2)
+    print(f'Recall={TPR_type2:0.4f}(default:{Recall_default:0.4f})\t'
+          f'Precision={PPV_type2:0.4f}(default:{Precision_default:0.4f})\t'
+          f'f1={f1_type2:0.4f}(default:{f1_default:0.4f})')
+ ```
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/Precisionrecall.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
