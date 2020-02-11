@@ -25,9 +25,11 @@ plt.show()
 <details>
 <summary><strong>   precision, recall, f1-score for outlier detection  </strong></summary>
 
-[Fig from wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
+- [Fig from wiki](https://en.wikipedia.org/wiki/Precision_and_recall)
 
-- Recall 描述了outlier是否找全 Precision 描述了outlier是否找对 f1-score 是两者的调和平均数 
+- Recall 描述了outlier是否找全 
+- Precision 描述了outlier是否找对 
+- f1-score 是两者的调和平均数 
 
  ```python
   y_true = np.array([1,1,1,0,0,0,0,0,0,0])
