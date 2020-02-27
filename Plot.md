@@ -242,12 +242,16 @@ end
     # TIP: set(111) when want to plot one
 # STEP3: SET THE PARAS
     lw = 1
-    color = ['b','r']
+    linecolors = plt.get_cmap('Set1').colors # other useful colors: ['coral', 'seagreen', 'darkgrey','orangered','slateblue']
+    markers = ['X', '^', 'P', 'd', '*'] # can be '. o v ^ s P + d * x X
+    # TIP： uppercase letter means filled markers
+    markersize = 6
     xyticksize = 8
     xylabelfontsize = 14
     titlefontsize = 20
     legendfontsize = 12
 # STEP4: PLOT THE FIGURE
+    t = np.arange(n) #n is the number of points in eachline
     ax.plot(t, data1, lw=lw, color=color[0], label='blue line')
     ax.plot(t, data2, lw=lw, color=color[1], label='red line')
     ax.legend(loc="lower right", fontsize=legendfontsize)
@@ -265,9 +269,15 @@ end
     # TIP: axis could be {'x', 'y', 'both'}
     #      grid color, linestyle, linewidth can be adjusted by tick_params
 
+    
     ax.set_xticks([0, 20, 25, 40, 60, 80, 100])
     ax.set_yticks([-0.5, 0, 0.5, 1, 1.5])
-
+    # TIPs: just lock the ticks 
+    
+    plt.xticks(t, (10, 50, 100, 500, 1000, 5000))
+    # TIPs: Arbitrarily change the xticks. t is the values of x axis.
+    
+    
     fig.tight_layout()
     plt.show()
     f.savefig(f"figname.pdf")
