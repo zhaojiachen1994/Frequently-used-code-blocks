@@ -3,8 +3,10 @@
   
 
  - [Color references](http://tableaufriction.blogspot.com/2012/11/finally-you-can-use-tableau-data-colors.html)
+ - [官方配色](https://matplotlib.org/examples/color/colormaps_reference.html)
  - [Color names](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
  - [Legend](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html)
+ 
  
 </details>
 
