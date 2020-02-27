@@ -252,8 +252,11 @@ end
     legendfontsize = 12
 # STEP4: PLOT THE FIGURE
     t = np.arange(n) #n is the number of points in eachline
-    ax.plot(t, data1, lw=lw, color=color[0], label='blue line')
-    ax.plot(t, data2, lw=lw, color=color[1], label='red line')
+    ax.plot(t, AUC_ISF, marker=markers[0], color=linecolors[4], label='IsoForest', lw=lw, ms=markersize)
+    ax.plot(t, AUC_IOF,         marker=markers[1], color=linecolors[1], label='IOF',       lw=lw, ms=markersize)
+    ax.plot(t, AUC_oneclasssvm, marker=markers[2], color=linecolors[2], label='OSVM',      lw=lw, ms=markersize)
+    ax.plot(t, AUC_autoEncoder, marker=markers[3], color=linecolors[3], label='DeepCoder', lw=lw, ms=markersize)
+    ax.plot(t, AUC_unDevcoder,  marker=markers[4], color=linecolors[0], label='unDevCoder',lw=lw, ms=markersize)
     ax.legend(loc="lower right", fontsize=legendfontsize)
     # legend set: https: // matplotlib.org / api / _as_gen / matplotlib.pyplot.legend.html
 # STEP5: ADJUST THE PLOT
