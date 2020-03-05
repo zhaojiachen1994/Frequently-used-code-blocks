@@ -6,7 +6,7 @@
  - [官方配色](https://matplotlib.org/examples/color/colormaps_reference.html)
  - [Color names](https://matplotlib.org/2.0.2/examples/color/named_colors.html)
  - [Legend](https://matplotlib.org/api/_as_gen/matplotlib.pyplot.legend.html)
- 
+ - [Mathtext on figure](https://matplotlib.org/3.1.3/gallery/text_labels_and_annotations/mathtext_examples.html#sphx-glr-gallery-text-labels-and-annotations-mathtext-examples-py)
  
 </details>
 
