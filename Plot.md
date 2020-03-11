@@ -231,6 +231,8 @@ end
 <summary><strong>   Matplotlib 画图模板  </strong></summary>
   
  ```python
+    import matplotlib.patches as patches #用来画长方形
+ 
     t = np.linspace(1,100,100)
     data1 = np.random.rand(100)*0.5
     data2 = np.random.rand(100)*0.6+0.5
@@ -279,7 +281,13 @@ end
     
     plt.xticks(t, (10, 50, 100, 500, 1000, 5000))
     # TIPs: Arbitrarily change the xticks. t is the values of x axis.
-    
+
+# STEP6: Add text or rectangle if needed
+    textstr='line1 \n25 line2 \n line3.'
+    ax.annotate(textstr,fontsize=annnotefontsize, xy=(50, 1.2), xytext=(75, 0.6),
+       arrowprops=dict(facecolor='b', edgecolor='b', width=5, shrink=0.1, alpha=0.5)) # xy是箭头位置，xytext是文本位置，标准为横纵坐标。
+    rect = patches.Rectangle(xy=(25, 0.3), width=25, height=1.08, linewidth=1, edgecolor='r', facecolor='none') 
+    ax.add_patch(rect) #添加长方形
     
     fig.tight_layout()
     plt.show()
