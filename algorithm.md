@@ -154,9 +154,12 @@ def oneSVMmodel(X,y, gamma = 1e-6):
 <details><summary><strong>   异常点检测-Local outlier factor  </strong></summary><blockquote>
     
 - [sklearn lof document](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.LocalOutlierFactor.html#sklearn.neighbors.LocalOutlierFactor)
-[sklearn source code](https://github.com/scikit-learn/scikit-learn/blob/95d4f0841/sklearn/neighbors/_lof.py#L19)
-[sklearn neighbor](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors.kneighbors)
-[wiki](https://en.wikipedia.org/wiki/Local_outlier_factor)
+
+- [sklearn source code](https://github.com/scikit-learn/scikit-learn/blob/95d4f0841/sklearn/neighbors/_lof.py#L19)
+
+- [sklearn neighbor](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors.kneighbors)
+
+- [wiki](https://en.wikipedia.org/wiki/Local_outlier_factor)
     
  ```python
     import numpy as np
