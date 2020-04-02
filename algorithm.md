@@ -151,5 +151,45 @@ def oneSVMmodel(X,y, gamma = 1e-6):
 -----------------------------------------------------------------------------------------------------------------------------------
 
 
+<details><summary><strong>   异常点检测-Local outlier factor  </strong></summary><blockquote>
+    [sklearn source code](https://github.com/scikit-learn/scikit-learn/blob/95d4f0841/sklearn/neighbors/_lof.py#L19)
+    [sklearn neighbor](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors.kneighbors)
+    [wiki](https://en.wikipedia.org/wiki/Local_outlier_factor)
+    
+ ```python
+    import numpy as np
+    from sklearn.neighbors import NearestNeighbors
+
+ 
+    n_neighbors = 4     # 最近邻的个数，包括自身，设置为4，其实只包括三个最临近的样本
+    X = np.array([[-10,0],[0,0],[1,0],[0,1], [0,-1]]) # 样本矩阵，with shape of [n_sample, n_feature]
+    neigh = NearestNeighbors(n_neighbors=n_neighbors)
+    neigh.fit(X)
+
+    '''计算最近邻的距离和标签'''
+    neigh_dist, neigh_ind = neigh.kneighbors(X)
+    # neigh_dist [n_sample, n_neighbors], each row is the distance of the sample to its neighbors
+    # neigh_ind [n_sample, n_neighbors], each row is the index of the sample's neighbors
+
+    '''计算可达距离， reachability distance'''
+    dist_k = neigh_dist[neigh_ind, n_neighbors-1]
+    reach_dist_array = np.maximum(neigh_dist, dist_k)
+    
+    # reach_dist_array[i,j] 是第i个样本的第j个neighbor到样本i的可达距离
+    '''计算局部可达密度'''
+    lrd = 1. / (np.mean(reach_dist_array, axis=1) + 1e-10)
+    # local_reachability_density是可达距离平均值的倒数
+
+    '''计算 local outlier factor'''
+    lrd_ratios_array = lrd[neigh_ind]/lrd[:, np.newaxis]
+    lof = np.mean(lrd_ratios_array, axis=1) # outlier with larger lof
+
+ ```
+ 
+</blockquote></details>
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 
