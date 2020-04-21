@@ -145,5 +145,35 @@ logger.info(f'ResultTable:\n{resultTable}')
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   Save and load almost all object of Python  </strong></summary>
+
+ ```python
+     import pickle
+
+    def save_obj(obj, name):
+        with open(name + '.pkl', 'wb') as f:
+            pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+
+    def load_obj(name):
+        with open(name + '.pkl', 'rb') as f:
+            return pickle.load(f)
+    dict = {'data1':{'model1':{'run1':[1,2,3,4,5],
+                               'run2':[2,3,4,5,6]},
+                     'model2':{'run1':[3,4,5,6,7],
+                               'run2':[4,5,6,7,8]}}
+           }
+    print(dict)
+    save_obj(dict, 'dict')
+    a = load_obj('dict')
+    print(a)
+ 
+ 
+ ```
+
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 
