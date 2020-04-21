@@ -149,7 +149,7 @@ logger.info(f'ResultTable:\n{resultTable}')
 <summary><strong>   Save and load almost all object of Python  </strong></summary>
 
  ```python
-     import pickle
+    import pickle
 
     def save_obj(obj, name):
         with open(name + '.pkl', 'wb') as f:
