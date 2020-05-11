@@ -342,3 +342,38 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 
 ------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   Python ROC curves  </strong></summary>
+
+ ```python
+def my_pd_describe(df):
+np.set_printoptions(precision=3, suppress=True)
+print(f'column names:{list(df.columns)}')
+Categorical_features = {}
+Numeric_features = {}
+for column_name in list(df.columns):
+    if df[column_name].dtypes == object:
+        Categorical_features[column_name] = {'Dtypes': df[column_name].dtypes,
+                                             'NAN': df[column_name].isna().sum(),
+                                             'Categories': df[column_name].unique(),
+                                             'Number of Instances': ''.join([f'{a}:{np.sum(df[column_name]==a)} ({np.mean(df[column_name]==a):0.2f}) | ' for a in df[column_name].unique()]),
+                                             }
+        # Categorical_features[column_name]={'mean':df[column_name].mean(), 'std':df[column_name].std()}
+    elif df[column_name].dtypes != object:
+        Numeric_features[column_name]={'dtype':df[column_name].dtypes,
+                                       'mean':df[column_name].mean(),
+                                       'std': df[column_name].std(), 
+                                       'max': df[column_name].max(),
+                                       'min': df[column_name].min(),
+                                       'Unique': len(df[column_name].unique()),
+                                       'NAN': df[column_name].isna().sum()}
+
+print(f'Numeric features:')
+print(tabulate(pd.DataFrame(Numeric_features).T, headers='keys', tablefmt='psql', showindex="always"))
+print('Categorical_features:')
+print(tabulate(pd.DataFrame(Categorical_features).T, headers='keys', tablefmt='psql', showindex="always"))
+ ```
+
+</details>
+
+-----------------------------------------------------------------------------------------------------------------------------------
