@@ -343,7 +343,7 @@ def foldts_XY(x, y, length_win, tensorlize=False):
 ------------------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary><strong>   Python ROC curves  </strong></summary>
+<summary><strong>   My code to read csv </strong></summary>
 
  ```python
 def my_pd_describe(df):
