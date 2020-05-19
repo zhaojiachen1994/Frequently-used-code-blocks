@@ -292,6 +292,19 @@ end
     fig.tight_layout()
     plt.show()
     f.savefig(f"figname.pdf")
+    
+    
+ # how to add leneng for multiple subplots
+    fig = plt.figure(num=1,figsize=[10, 3.5])
+    ax1 = plt.subplot(121)
+    ax2 = plt.subplot(122)
+    handles, labels = ax1.get_legend_handles_labels()
+    lgd = fig.legend(handles, labels, loc='upper center', ncol=5, labelspacing=0.,bbox_to_anchor=(0.5, 1.1))
+    
+    fig.tight_layout()
+    fig.savefig('k_sensitivity.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight')
+    
+    ref: https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box
  ```
  
 </details>
