@@ -367,15 +367,14 @@ set(gca,'XColor','red');% X轴的颜色
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-<details>
-<summary><strong>   Plot tree or graph structure with Graphviz  </strong></summary>
+<details><summary><strong>   Plot tree or graph structure with Graphviz  </strong></summary>
 
-- [How to install Graphviz](https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft)
-  For Windows:
-  - Install windows package from: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
-  - Install python graphviz package by pip install graphviz
-  - Add C:\Program Files (x86)\Graphviz2.38\bin to User path
-  - Add C:\Program Files (x86)\Graphviz2.38\bin\dot.exe to System Path
+  - [How to install Graphviz](https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft)
+    For Windows:
+    - Install windows package from: https://graphviz.gitlab.io/_pages/Download/Download_windows.html
+    - Install python graphviz package by pip install graphviz
+    - Add C:\Program Files (x86)\Graphviz2.38\bin to User path
+    - Add C:\Program Files (x86)\Graphviz2.38\bin\dot.exe to System Path
 
 
  ```python
