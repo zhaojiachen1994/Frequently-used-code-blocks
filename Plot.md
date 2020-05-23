@@ -322,7 +322,13 @@ end
     2. Install python graphviz package by pip install graphviz
     3. Add C:\Program Files (x86)\Graphviz2.38\bin to User path
     4. Add C:\Program Files (x86)\Graphviz2.38\bin\dot.exe to System Path
- - [Code examples](https://graphviz.readthedocs.io/en/stable/examples.html)
+- [Code examples](https://graphviz.readthedocs.io/en/stable/examples.html)
+
+- [How to bold parts of labels](https://stackoverflow.com/questions/30194104/graphviz-bold-font-attribute)
+  - successful example: tree.node(f'{ind}', label=f"< <B>{ind}</B> ({info_df['Dist2Peak'][i]:0.3f}) >") 
+
+ 
+ 
 </details>
 
 
