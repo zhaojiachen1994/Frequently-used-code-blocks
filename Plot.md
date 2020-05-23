@@ -329,7 +329,7 @@ end
 - [How to bold parts of labels](https://stackoverflow.com/questions/30194104/graphviz-bold-font-attribute)
   - successful example: tree.node(f'{ind}', label=f"< <B>{ind}</B> ({info_df['Dist2Peak'][i]:0.3f}) >") 
 ```python
- tree = Digraph('GASP tree', filename='tree.gv',node_attr={'color': 'lightblue2', 'style': 'filled'})
+    tree = Digraph('GASP tree', filename='tree.gv',node_attr={'color': 'lightblue2', 'style': 'filled'})
     tree.attr('node', shape='ellipse')
     tree.attr('node', fontname = "Arial")
     tree.attr('node', fontsize='20')
@@ -343,6 +343,7 @@ end
     for i, ind in enumerate(inds):
         if ind != 7:
             tree.edge(f"{info_df['bigger_nn'][ind-1]+1}",f"{ind}", label=f" {info_df['onestep'][i]:0.3f}")
+    tree.view()
  ```
   
 </details>
