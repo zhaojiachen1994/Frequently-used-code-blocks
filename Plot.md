@@ -316,18 +316,15 @@ end
 <details>
 <summary><strong>   Plot tree or graph structure with Graphviz package  </strong></summary>
 
-- How to 
-
-
-
-
- ```python
- 
- ```
-
+- [How to install Graphviz package](https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft)
+  - For Windows:
+    1. Install windows package from [here](https://graphviz.gitlab.io/_pages/Download/Download_windows.html)
+    2. Install python graphviz package by pip install graphviz
+    3. Add C:\Program Files (x86)\Graphviz2.38\bin to User path
+    4. Add C:\Program Files (x86)\Graphviz2.38\bin\dot.exe to System Path
+ - [Code examples](https://graphviz.readthedocs.io/en/stable/examples.html)
 </details>
 
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
