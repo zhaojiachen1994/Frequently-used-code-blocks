@@ -314,8 +314,25 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details>
-  
-<summary><strong>  plot坐标轴设置方法  </strong></summary>
+<summary><strong>   Plot tree or graph structure with Graphviz package  </strong></summary>
+
+- How to 
+
+
+
+
+ ```python
+ 
+ ```
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+
+<details><summary><strong>  plot坐标轴设置方法  </strong></summary>
 
 （1）去除坐标轴使用axis off
       
