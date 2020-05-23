@@ -313,7 +313,8 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-<details><summary><strong>  plot坐标轴设置方法  </strong></summary>
+<details>
+<summary><strong>  plot坐标轴设置方法  </strong></summary>
 （1）去除坐标轴使用axis off
       
       如果想要x的坐标没有：set（gca,'xtick',[])
@@ -364,10 +365,11 @@ set(gca,'XColor','red');% X轴的颜色
 关闭所有的坐标轴标签、刻度、背景
 14. axis on
 打开所有的坐标轴标签、刻度、背景
-
+</details>
 -----------------------------------------------------------------------------------------------------------------------------------
 
-<details><summary><strong>   Plot tree or graph structure with Graphviz  </strong></summary>
+<details>
+<summary><strong>   Plot tree or graph structure with Graphviz  </strong></summary>
 
   - [How to install Graphviz](https://stackoverflow.com/questions/35064304/runtimeerror-make-sure-the-graphviz-executables-are-on-your-systems-path-aft)
     For Windows:
