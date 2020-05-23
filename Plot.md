@@ -322,13 +322,29 @@ end
     2. Install python graphviz package by pip install graphviz
     3. Add C:\Program Files (x86)\Graphviz2.38\bin to User path
     4. Add C:\Program Files (x86)\Graphviz2.38\bin\dot.exe to System Path
+    5. import os
+       os.environ["PATH"] += os.pathsep + r'C:\Program Files (x86)\Graphviz2.38\bin'
 - [Code examples](https://graphviz.readthedocs.io/en/stable/examples.html)
 
 - [How to bold parts of labels](https://stackoverflow.com/questions/30194104/graphviz-bold-font-attribute)
   - successful example: tree.node(f'{ind}', label=f"< <B>{ind}</B> ({info_df['Dist2Peak'][i]:0.3f}) >") 
-
- 
- 
+```python
+ tree = Digraph('GASP tree', filename='tree.gv',node_attr={'color': 'lightblue2', 'style': 'filled'})
+    tree.attr('node', shape='ellipse')
+    tree.attr('node', fontname = "Arial")
+    tree.attr('node', fontsize='20')
+    tree.attr('edge', fontsize='14')
+    for i, ind in enumerate(inds):
+        print(ind, info_df['onestep'][i])
+        if ind != 7:
+            tree.node(f'{ind}', label=f"< <B>{ind}</B> ({info_df['Dist2Peak'][i]:0.2f})>")
+        else:
+            tree.node(f'{ind}', label=f"<<B>{ind}</B> (Density Peak)>")
+    for i, ind in enumerate(inds):
+        if ind != 7:
+            tree.edge(f"{info_df['bigger_nn'][ind-1]+1}",f"{ind}", label=f" {info_df['onestep'][i]:0.3f}")
+ ```
+  
 </details>
 
 
