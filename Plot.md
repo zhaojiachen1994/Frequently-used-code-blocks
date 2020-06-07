@@ -281,6 +281,10 @@ end
     
     plt.xticks(t, (10, 50, 100, 500, 1000, 5000))
     # TIPs: Arbitrarily change the xticks. t is the values of x axis.
+    
+    # set empty xticks, yticks
+    plt.xticks([])
+    plt.yticks([])
 
 # STEP6: Add text or rectangle if needed
     textstr='line1 \n25 line2 \n line3.'
