@@ -229,6 +229,8 @@ end
 
 <details>
 <summary><strong>   Matplotlib 画图模板  </strong></summary>
+  [How to add figlegend](https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box) 
+  
   
  ```python
     import matplotlib.patches as patches #用来画长方形
