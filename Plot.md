@@ -359,95 +359,76 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary><strong>   Matplotlib 柱状图 bars  </strong></summary>
-  
-[How to add figlegend](https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box) 
-  
-  
+<summary><strong>   Matplotlib 柱状图 bars  </strong></summary>  
  ```python
-    import matplotlib.patches as patches #用来画长方形
- 
-    t = np.linspace(1,100,100)
-    data1 = np.random.rand(100)*0.5
-    data2 = np.random.rand(100)*0.6+0.5
-# STEP1: CREATE FIGURE
-    fig = plt.figure(num=None, figsize=(6.4, 4.8), dpi=100, facecolor='w', edgecolor='w')
-    # TIP: default figure size is (6.4, 4.8); default dpi is 100;
-# STEP2: CREATE AXES
-    ax = plt.subplot(111, facecolor='antiquewhite')
-    # TIP: set(111) when want to plot one
-# STEP3: SET THE PARAS
-    lw = 1
-    linecolors = plt.get_cmap('Set1').colors # other useful colors: ['coral', 'seagreen', 'darkgrey','orangered','slateblue']
-    markers = ['X', '^', 'P', 'd', '*'] # can be '. o v ^ s P + d * x X
-    # TIP： uppercase letter means filled markers
-    markersize = 6
-    xyticksize = 8
-    xylabelfontsize = 14
-    titlefontsize = 20
-    legendfontsize = 12
-# STEP4: PLOT THE FIGURE
-    t = np.arange(n) #n is the number of points in eachline
-    ax.plot(t, AUC_ISF, marker=markers[0], color=linecolors[4], label='IsoForest', lw=lw, ms=markersize)
-    ax.plot(t, AUC_IOF,         marker=markers[1], color=linecolors[1], label='IOF',       lw=lw, ms=markersize)
-    ax.plot(t, AUC_oneclasssvm, marker=markers[2], color=linecolors[2], label='OSVM',      lw=lw, ms=markersize)
-    ax.plot(t, AUC_autoEncoder, marker=markers[3], color=linecolors[3], label='DeepCoder', lw=lw, ms=markersize)
-    ax.plot(t, AUC_unDevcoder,  marker=markers[4], color=linecolors[0], label='unDevCoder',lw=lw, ms=markersize)
+    import numpy as np
+    import matplotlib.pyplot as plt
+      
+    def semi_results():
+                #   Arrhythmia  Campaign  Mnist   Pima    Satellite  Thyroid
+    roc_Encoding = [0.690,      0.667,    0.640,  0.703,  0.604,     0.951  ]
+    pr_Encoding  = [0.312,      0.225,    0.190,  0.496,  0.578,     0.428  ]
+    roc_Dev      = [0.744,      0.554,    0.893,  0.702,  0.796,     0.998  ]
+    pr_Dev       = [0.410,      0.162,    0.737,  0.508,  0.745,     0.870  ]
+    roc_all      = [0.849,      0.716,    0.945,  0.735,  0.877,     0.998  ]
+    pr_all       = [0.465,      0.256,    0.800,  0.588,  0.838,     0.915  ]
+    return roc_Encoding, pr_Encoding, roc_Dev, pr_Dev, roc_all, pr_all
+    
+    
+    datasets = ['Arrhythmia', 'Campaign', 'Mnist', 'Pima', 'Satellite', 'Thyroid']
+    roc_1, pr_1, roc_2, pr_2, roc_3, pr_3 = semi_results()
+    # STEP1: create figures
+    fig = plt.figure(num=None, figsize=(7, 4.8), dpi=100, facecolor='w', edgecolor='w')
+    ax = plt.subplot(111, facecolor='w')
+
+    # STEP2: set parameters
+    xyticksize = 12
+    xylabelfontsize = 16
+    annnotefontsize = 6
+    legendfontsize = 10
+    colors = plt.get_cmap('tab20').colors
+    width = 0.25  # the width of the bars
+
+    # STEP3: plot the curves or bars, and set the legend and xy labels
+    x = np.arange(len(roc_1))  # the label locations
+    rects1 = ax.bar(x-width, roc_1, width, color=colors[1], label='Only encoding net')
+    rects2 = ax.bar(x,       roc_2, width, color=colors[3], label='Only scoring net')
+    rects3 = ax.bar(x+width, roc_3, width, color=colors[2], label='Proposed')
+    ax.set_ylabel('AUC_ROC', fontsize=xylabelfontsize)
+    ax.set_xlabel('Dataset', fontsize=xylabelfontsize)
     ax.legend(loc="lower right", fontsize=legendfontsize)
-    # legend set: https: // matplotlib.org / api / _as_gen / matplotlib.pyplot.legend.html
-# STEP5: ADJUST THE PLOT
-    ax.set_title('(a) Title', fontsize = titlefontsize)
-    ax.set_xlabel('Time', fontsize=xylabelfontsize)
-    ax.set_ylabel('Value (%)',fontsize=xylabelfontsize)
 
-    ax.set_xlim([0, 100])
-    ax.set_ylim([-0.5, 1.5])
+    # STEP4: add grid (set the grid background)
+    ax.set_axisbelow(True)
+    ax.yaxis.grid(color='gray', alpha=0.5)
 
-    ax.grid(True, axis='both')
+    # STEP5: adjust xy sticks
+    ax.set_xticks(x)
+    ax.set_xticklabels(datasets)
     ax.tick_params(axis='both', direction='in', length=3, which='major', labelsize=xyticksize)
-    # TIP: axis could be {'x', 'y', 'both'}
-    #      grid color, linestyle, linewidth can be adjusted by tick_params
 
-    
-    ax.set_xticks([0, 20, 25, 40, 60, 80, 100])
-    ax.set_yticks([-0.5, 0, 0.5, 1, 1.5])
-    # TIPs: just lock the ticks 
-    
-    plt.xticks(t, (10, 50, 100, 500, 1000, 5000))
-    # TIPs: Arbitrarily change the xticks. t is the values of x axis.
-    
-    # set empty xticks, yticks
-    plt.xticks([])
-    plt.yticks([])
+    def autolabel(rects):
+        """Attach a text label above each bar in *rects*, displaying its height."""
+        for rect in rects:
+            height = round(rect.get_height(), 2)
+            ax.annotate(f'{height:0.2f}', fontsize=annnotefontsize,
+                        xy=(rect.get_x() + rect.get_width() / 2, height),
+                        xytext=(-0, 3),  # 3 points vertical offset
+                        textcoords="offset points",
+                        ha='center', va='bottom')
+    autolabel(rects1)
+    autolabel(rects2)
+    autolabel(rects3)
 
-# STEP6: Add text or rectangle if needed
-    textstr='line1 \n25 line2 \n line3.'
-    ax.annotate(textstr,fontsize=annnotefontsize, xy=(50, 1.2), xytext=(75, 0.6),
-       arrowprops=dict(facecolor='b', edgecolor='b', width=5, shrink=0.1, alpha=0.5)) # xy是箭头位置，xytext是文本位置，标准为横纵坐标。
-    rect = patches.Rectangle(xy=(25, 0.3), width=25, height=1.08, linewidth=1, edgecolor='r', facecolor='none') 
-    ax.add_patch(rect) #添加长方形
-    
+    # STEP6: Output the figures
     fig.tight_layout()
     plt.show()
-    f.savefig(f"figname.pdf")
-    
-    
- # how to add leneng for multiple subplots
-    fig = plt.figure(num=1,figsize=[10, 3.5])
-    ax1 = plt.subplot(121)
-    ax2 = plt.subplot(122)
-    handles, labels = ax1.get_legend_handles_labels()
-    lgd = fig.legend(handles, labels, loc='upper center', ncol=5, labelspacing=0.,bbox_to_anchor=(0.5, 1.1))
-    
-    fig.tight_layout()
-    fig.savefig('k_sensitivity.pdf', bbox_extra_artists=(lgd,), bbox_inches='tight')
-    
-    ref: https://stackoverflow.com/questions/10101700/moving-matplotlib-legend-outside-of-the-axis-makes-it-cutoff-by-the-figure-box
+    fig.savefig(f"./ablation_experiments_figures/filename.pdf", bbox_inches='tight')
  ```
  
 </details>
 
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/matplotlib_template.png" width="200" height="120"/></div>
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/matplotlab_group_bars.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
