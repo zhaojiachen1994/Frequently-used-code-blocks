@@ -295,6 +295,18 @@ OUTPUT:
 </details>
 -----------------------------------------------------------------------------------------------------------------------------------
 
+<details>
+<summary><strong>   Python ROC curves  </strong></summary>
+
+ ```python
+ 
+ ```
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
+
+-----------------------------------------------------------------------------------------------------------------------------------
 
 ## 调整learning rate
 https://pytorch.org/docs/stable/optim.html
