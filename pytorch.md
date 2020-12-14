@@ -296,15 +296,39 @@ OUTPUT:
 -----------------------------------------------------------------------------------------------------------------------------------
 
 <details>
-<summary><strong>   Python ROC curves  </strong></summary>
+<summary><strong>  LinearAutoencoderModule   </strong></summary>
 
  ```python
- 
+ class LinearAutoencoderModule(nn.Module, PyTorchUtils):
+    def __init__(self, layer_dims = [128, 64, 32, 8], seed=1, gpu=1):
+        super().__init__()
+        PyTorchUtils.__init__(self, seed, gpu)
+        if type(layer_dims) is list:
+            layer_dims = np.array(layer_dims)
+        # encoder
+        encoder_dims = np.concatenate([[layer_dims[0]], layer_dims[1:-1].repeat(2), [layer_dims[-1]]])
+        encoder_layers = np.array([[nn.Linear(int(a), int(b)), nn.ReLU()] for a, b in encoder_dims.reshape(-1, 2)]).flatten()[:-1]
+        self.encoder = nn.Sequential(*encoder_layers)
+        self.to_device(self.encoder)
+        # decoder
+        decoder_dims = encoder_dims[::-1]
+        decoder_layers = np.array([[nn.Linear(int(a), int(b)), nn.ReLU()] for a, b in decoder_dims.reshape(-1, 2)]).flatten()[:-1]
+        self.decoder = nn.Sequential(*decoder_layers)
+        self.to_device(self.decoder)
+
+    def forward(self, X):
+        X = self.to_var(X)
+        enc = self.encoder(X)
+        dec = self.decoder(enc)
+        return enc, dec
+
+    def loss_function(self, X, dec):
+        X = self.to_var(X)
+        loss_recon = torch.mean(torch.pow(X - dec, 2))
+        return loss_recon
  ```
 
 </details>
-
-<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/rocplot.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
