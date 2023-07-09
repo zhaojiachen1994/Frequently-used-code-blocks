@@ -11,7 +11,7 @@ files = [x for x in os.listdir(video_path) if x.endswith(".MP4")]
 
 <details> 
     <summary><strong>   python 调用ffmpeg 压缩视频分辨率   </strong></summary>
-scale=-1:480, scale=640:480, scale=width:hight
+    scale=-1:480, scale=640:480, scale=width:hight
     
 ```python
 video_path = f"{path}/raw_videos"
@@ -22,3 +22,19 @@ for file in files:
     isRun = os.system(compress)
 ```
 </details>
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   调用moviepy提取音频   </strong></summary>
+    
+```python
+audio_path = f"{path}/audio"
+os.makedirs(audio_path, exist_ok=True)
+videofiles = [x for x in os.listdir(f"{path}/640_videos") if x.endswith(".MP4")]
+for v in videofiles:
+    audio_clip = AudioFileClip(f"{path}/640_videos/{v}")
+    audio_clip.write_audiofile(f"{audio_path}/{v[:-4]}.wav")
+```
+</details>
+
