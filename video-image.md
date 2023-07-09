@@ -12,6 +12,7 @@ files = [x for x in os.listdir(video_path) if x.endswith(".MP4")]
 <details> 
     <summary><strong>   python 调用ffmpeg 压缩视频分辨率   </strong></summary>
 scale=-1:480, scale=640:480, scale=width:hight
+    
 ```python
 video_path = f"{path}/raw_videos"
 files = [x for x in os.listdir(video_path) if x.endswith(".MP4")]
