@@ -118,6 +118,9 @@ TIPS:
   - seglearn.SegmentXY自定义Y的提取方法 eg:max
   - 负指数曲线的变化趋势
   - 保存实验组的结果到csv文件
+
+- [Video and image processing](https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/video-image.md)
+  - 遍历文件夹下所有视频、图像数据
   - 
   
   
