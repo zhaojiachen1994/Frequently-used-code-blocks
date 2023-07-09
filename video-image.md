@@ -72,5 +72,64 @@ def extract_frag(path, p_start, t):
 ```
 </details>
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
+<details> 
+    <summary><strong>   视频文件批量重命名   </strong></summary>
+    1_abc.mp4 -> 01_abc.mp4
+    
+```python
+def rename_videos(path):
+    video_path = f"{path}/sync_videos"
+    videos = [x for x in os.listdir(video_path) if x.endswith(".MP4")]
+    for video in videos:
+        ind = video.split('_', 1)
+        ind[0] = f"{int(ind[0]):02d}"
+        tar = "_".join(ind)
+        os.rename(f"{video_path}/{video}", f"{video_path}/{tar}")
+```
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   提取同步帧   </strong></summary>
+    
+```python
+def extract_sync_images(path, i_frame=7205):
+    video_path = f"{path}/sync_640_videos"
+    videos = sorted([x for x in os.listdir(video_path) if x.endswith(".MP4")])
+    for i, video in enumerate(videos):
+        ic(video)
+        cap = cv2.VideoCapture(f"{video_path}/{video}")
+        cap.set(cv2.CAP_PROP_POS_FRAMES, i_frame)
+        ret, frame = cap.read()
+        cv2.imwrite(f"{path}/temp_640/view{i + 1}_frame{i_frame}.jpg", frame)
+```
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   将图片拼接成大图片   </strong></summary>
+    images size: [x, y] = [height, width] = [480, 640], big image shape: [3, 8] 3 rows, 8 columns 
+    
+```python
+video_path = f"{path}/sync_640_videos"
+videos = sorted([x for x in os.listdir(video_path) if x.endswith(".MP4")])
+images = []
+for i, video in enumerate(videos):
+    cap = cv2.VideoCapture(f"{video_path}/{video}")
+    cap.set(cv2.CAP_PROP_POS_FRAMES, i_frame)
+    ret, frame = cap.read()
+    images.append(frame)
+big_image = np.zeros((1440, 7680, 3), dtype=np.uint8)  # Resizing the big image with 480*3=1440 and 640*8=7680
+for i in range(3):
+    for j in range(8):
+        x = i * 480
+        y = j * 640
+        big_image[x:x + 480, y:y + 640, :] = images[i * 8 + j]
+cv2.imwrite(f"{path}/temp_640/allview_frame{i_frame}.jpg", big_image)
+```
+</details>
 
