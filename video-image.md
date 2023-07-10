@@ -133,3 +133,33 @@ cv2.imwrite(f"{path}/temp_640/allview_frame{i_frame}.jpg", big_image)
 ```
 </details>
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   Resize the image   </strong></summary>
+    
+```python
+import cv2
+ 
+img = cv2.imread('/home/img/python.png', cv2.IMREAD_UNCHANGED)
+ 
+print('Original Dimensions : ',img.shape)
+ 
+scale_percent = 60 # percent of original size
+width = int(img.shape[1] * scale_percent / 100)
+height = int(img.shape[0] * scale_percent / 100)
+dim = (width, height)
+  
+# resize image
+resized = cv2.resize(img, dim, interpolation = cv2.INTER_AREA)
+ 
+print('Resized Dimensions : ',resized.shape)
+ 
+cv2.imshow("Resized image", resized)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+</details>
+
+
+
