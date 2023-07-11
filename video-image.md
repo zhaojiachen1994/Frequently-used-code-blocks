@@ -161,5 +161,18 @@ cv2.destroyAllWindows()
 ```
 </details>
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
+<details> 
+    <summary><strong>   计算视频时长   </strong></summary>
+    
+```python
+import cv2
+cap = cv2.VideoCapture(video_file)
+frames = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+fps = cap.get(cv2.CAP_PROP_FPS)
+seconds = round(frames / fps)
+video_time = datetime.timedelta(seconds=seconds)
+```
+</details>
 
