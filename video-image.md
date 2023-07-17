@@ -176,3 +176,25 @@ video_time = datetime.timedelta(seconds=seconds)
 ```
 </details>
 
+----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   按照时间间隔提取视频帧   </strong></summary>
+    
+```python
+c = 0
+cap = cv2.VideoCapture(video_path)
+# width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)/2)
+# height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)/2)
+width, height = 640, 480
+rval = cap.isOpened()
+while rval:
+    rval, frame = cap.read()
+    if rval and c % inter == 0:
+        frame = cv2.resize(frame, [width, height], interpolation=cv2.INTER_AREA)
+        cv2.imwrite(f"{target_path}/{c:04d}.jpg", frame)
+    c = c + 1
+cap.release()
+```
+</details>
+
