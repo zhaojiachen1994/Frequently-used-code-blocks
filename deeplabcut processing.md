@@ -8,3 +8,13 @@
 </details>
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
+<details> 
+    <summary><strong>   修改multi level columns的列名   </strong></summary>
+```python   
+    rename_dict = {'xiongzhui_1': 'thoracic_1', 'xiongzhui_2': 'thoracic_2'}
+    df.rename(columns=rename_dict, level=1, inplace=True)
+```
+</details>
+
+----------------------------------------------------------------------------------------------------------------------------------------
