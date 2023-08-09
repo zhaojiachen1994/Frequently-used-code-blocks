@@ -30,3 +30,16 @@
 </details>
 
 ------------------------------------------------------------------------------------------------------------------------
+<details>
+    <summary><strong>   如何创建一个dataset_info的类  </strong></summary>
+    
+```python
+    from mmpose.datasets import DatasetInfo
+    dataset_info_file = "/configs/_base_/mouse_datasets/mouse_dannce_p22.py"
+    dataset_info = DatasetInfo(mmcv.Config.fromfile(config_file)._cfg_dict['dataset_info'])
+    ic(dataset_info.__dir__())
+```
+
+</details>
+
+
