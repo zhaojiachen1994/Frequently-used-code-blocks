@@ -43,4 +43,23 @@
 
 </details>
 
+------------------------------------------------------------------------------------------------------------------------
+
+<details>
+    <summary><strong>   build dataset and forward a model  </strong></summary>
+    
+```python
+    import mmcv
+    from mmpose.apis import init_pose_model
+    from mmpose.datasets import build_dataloader, build_dataset
+
+    config_file = "../configs/myconfigs/h36m_v2.py"
+    config = mmcv.Config.fromfile(config_file)
+    dataset = build_dataset(config.data.train)
+    model = init_pose_model(config_file, checkpoint=None, device="cpu")
+
+```
+
+</details>
+
 
