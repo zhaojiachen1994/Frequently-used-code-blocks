@@ -391,6 +391,7 @@ print(tabulate(pd.DataFrame(Categorical_features).T, headers='keys', tablefmt='p
                 positions.append(None)
         return positions
 
+    positions = [list2.index(item) if item in list2 else None for item in list1]
 
     # 示例使用
     list1 = [1, 2, 3, 4, 5]
