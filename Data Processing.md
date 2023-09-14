@@ -377,3 +377,27 @@ print(tabulate(pd.DataFrame(Categorical_features).T, headers='keys', tablefmt='p
 </details>
 
 -----------------------------------------------------------------------------------------------------------------------------------
+
+<details>
+<summary><strong> 一个list的元素在另一个list中的位置 </strong></summary>
+
+ ```python
+    def find_positions(list1, list2):
+        positions = []
+        for item in list1:
+            if item in list2:
+                positions.append(list2.index(item))
+            else:
+                positions.append(None)
+        return positions
+
+
+    # 示例使用
+    list1 = [1, 2, 3, 4, 5]
+    list2 = [5, 4, 3, 2, 1]
+    result = find_positions(list1, list2)
+    print(result)
+ ```
+
+</details>
+
