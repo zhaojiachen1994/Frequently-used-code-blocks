@@ -435,6 +435,8 @@ end
 
 -----------------------------------------------------------------------------------------------------------------------------------
 <details><summary><strong>  绘制棋盘格  </strong></summary>
+  
+```python
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -457,6 +459,7 @@ plt.xticks([])
 plt.yticks([])
 plt.axis('off')
 plt.show()
+```
 
 </details>
 
