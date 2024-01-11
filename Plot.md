@@ -434,6 +434,35 @@ end
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/matplotlab_group_bars.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
+<details><summary><strong>  plot坐标轴设置方法  </strong></summary>
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+
+color1 = (1, 1, 1)
+color2 = (247 / 255, 220 / 255, 111 / 255)
+s = 10
+mat = np.zeros((s, s))
+for i in range(s):
+    for j in range(s):
+        if (i + j) % 2 == 0:
+            mat[i, j] = 1
+        else:
+            mat[i, j] = -1
+
+my_cmap = matplotlib.colors.LinearSegmentedColormap.from_list('my_camp', ['white', 'skyblue'], 2)
+fig, ax = plt.subplots(figsize=(10, 10))
+cs = ax.imshow(mat, cmap=my_cmap)
+plt.subplots_adjust(left=0, right=1, bottom=0, top=1)
+plt.xticks([])
+plt.yticks([])
+plt.axis('off')
+plt.show()
+
+</details>
+
+<div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/floor.png" width="200" height="200"/></div>
+-----------------------------------------------------------------------------------------------------------------------------------
 
 <details><summary><strong>  plot坐标轴设置方法  </strong></summary>
 
