@@ -434,13 +434,12 @@ end
 <div align=left><img src ="https://github.com/zhaojiachen1994/Frequently-used-code-blocks/blob/master/Figures/matplotlab_group_bars.png" width="200" height="120"/></div>
 
 -----------------------------------------------------------------------------------------------------------------------------------
-<details><summary><strong>  plot坐标轴设置方法  </strong></summary>
+<details><summary><strong>  绘制棋盘格  </strong></summary>
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-color1 = (1, 1, 1)
-color2 = (247 / 255, 220 / 255, 111 / 255)
+
 s = 10
 mat = np.zeros((s, s))
 for i in range(s):
